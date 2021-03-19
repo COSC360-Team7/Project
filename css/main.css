@@ -1,0 +1,216 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+.bgPrimary{
+background-color: rgb(123, 224, 216);
+}
+.bgSecondary{
+    background-color: rgb(32, 132, 179);
+    }
+.bgDark{
+background-color: darkgray;
+}
+.bgWhite{
+background-color: white;
+}
+
+.colorPrimary{
+color:  rgb(123, 224, 216);
+}
+.colorSecondary{
+    color:  rgb(32, 132, 179);
+    }
+
+.colorDark{
+color: darkgray;
+}
+
+.colorWhite{
+color:white
+}
+
+/*general*/
+
+.container{
+    margin: 0 5%;
+}
+
+a{ 
+    text-decoration: none;
+    color:black;
+}
+
+ul{
+    list-style: none;
+}
+
+.flexbox{
+    display:flex;
+}
+
+.g-3-col{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1em;
+}
+
+.g-1-2-col{
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 1em;
+}
+
+
+h1,h2,h3,h4{
+    margin:0;
+}
+
+.text-align-center{
+    text-align: center;
+}
+
+.justify-content-center{
+justify-content: center;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+
+.justify-content-evenly{
+    justify-content: space-evenly;
+}
+
+/*header styling*/
+
+header li{
+    margin: 1em;
+}
+
+header{
+    padding: 1em 0;
+}
+
+.title{
+    font-size: 2.0em;
+    font-weight: bold;
+    color:  rgb(57, 150, 142);
+}
+
+.title > span{
+    color:  rgb(32, 132, 179);
+    font-weight: none;
+}
+
+header .contact-info{
+    width:33%;
+}
+
+header .sns{
+    width:33%;
+}
+
+header nav{
+    padding: 0;
+}
+
+/*main styling*/
+
+main .img{
+    width:100%;
+    object-fit:cover;
+
+}
+
+.blog-post{
+    margin: 1em 0em;
+}
+
+h1{
+    text-align: center;
+}
+
+.summary{
+    margin: 0.5em 0.5em 0 0.5em;
+}
+
+.info{ 
+    margin:0 0.5em;
+}
+
+.readMore{
+    padding: 0.3em;
+}
+
+main .tag{
+    margin-right: 1em;
+    background-color: rgb(32, 132, 179);
+    padding: 0.1em;
+}
+
+.date{
+    margin-left: 1em;
+    padding: 0.3em;
+    font-style: italic;
+}
+
+.btn-container{
+    margin:2em;
+}
+
+.btn-load{
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 1em 2em;
+    border: 0.5pt solid lightgray;
+    background-color: white;
+    color:rgb(123, 224, 216);
+}
+
+
+/*footer styling*/
+
+footer{
+    padding: 3em;
+}
+
+footer .title{
+    font-size: 1em;
+    font-weight: bold;
+    color:  rgb(57, 150, 142);
+}
+
+footer .title > span{
+    color:  rgb(32, 132, 179);
+    font-weight: none;
+}
+
+.title-container{
+    margin-top: 1em;
+}
+
+.tags ul{
+    flex-wrap: wrap;
+}
+
+.tags .tag{
+    margin:1em;
+    padding: 0.1em;
+    background-color: rgb(32, 132, 179);
+}
+
+.tags .tag a{
+    font-size: 0.8em;
+    color: white;
+}
+
+/*needs to be implemented later for responsiveness for mobile devices */
+@media (max-width:500px){
+    .flexbox{
+        flex-direction: column;
+    }
+}
