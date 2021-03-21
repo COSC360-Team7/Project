@@ -30,7 +30,25 @@ color:white
 }
 
 /*general*/
-
+#close{
+    margin: 0;
+    padding: 0;
+    cursor: default;
+}
+#login{
+    position: absolute;
+    background-color: #a4eeee;
+    width:fit-content;
+    height: fit-content;
+    padding: 20px;
+    left:75%;
+    top:25%;
+}
+input{
+    padding:5px;
+    height: 20px;
+    margin:5px;
+}
 .container{
     margin: 0 5%;
 }
