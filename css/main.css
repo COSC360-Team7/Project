@@ -7,6 +7,10 @@ background-color: rgb(123, 224, 216);
 .bgSecondary{
     background-color: rgb(32, 132, 179);
     }
+
+.bgBlack{
+    background-color: black;
+}
 .bgDark{
 background-color: darkgray;
 }
@@ -78,6 +82,13 @@ ul{
     grid-column-gap: 1em;
 }
 
+.nav-section{
+    padding: 1em;
+}
+
+.nav-section h1{
+    font-size: 2em;
+}
 
 h1,h2,h3,h4{
     margin:0;
@@ -189,6 +200,21 @@ main .tag{
     color:rgb(123, 224, 216);
 }
 
+/*blogpost styling*/
+
+.blog-detail{
+    margin:1em;
+}
+
+.img-detail{
+    width: 50%;
+    height:5%;
+    object-fit:cover;
+}
+
+.blog-banner{
+    padding:1em;
+}
 
 /*footer styling*/
 
