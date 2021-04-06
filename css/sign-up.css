@@ -39,6 +39,7 @@ input[type="file"] {
   padding: 6px 12px;
   cursor: pointer;
   font-size: small;
+  margin-bottom:10px;
 }
 form{
   justify-content: center;
@@ -54,7 +55,7 @@ form{
   border-radius: 30px;
   border: 0px;
   background-color: orangered;
-  margin: auto;
+  margin: 10px;
 }
 .submit:hover{
   background-color: orange;
