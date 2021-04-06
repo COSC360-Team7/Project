@@ -37,7 +37,7 @@ color:white
 #close{
     margin: 0;
     padding: 0;
-    cursor: default;
+    cursor: pointer;
 }
 #login{
     position: absolute;
@@ -112,6 +112,12 @@ justify-content: center;
 
 .justify-content-evenly{
     justify-content: space-evenly;
+}
+
+/* nav styling */
+.nav-title{
+    font-size: large;
+    font-weight: bold;
 }
 
 /*header styling*/
