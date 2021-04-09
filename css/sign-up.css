@@ -17,12 +17,15 @@ header{
 }
 
 .form{
-  /* display: flex; */
-  justify-content: flex-start;
+  display: flex;
+  justify-content: center;
   /* align-items: space-between; */
   margin:auto;
+  margin-bottom: 15px;
   width: 60%;
-  border: 1px solid black;
+  background-color: aliceblue;
+  padding-top:15px;
+  padding-bottom: 15px;
 }
 .input-box{
   overflow: auto;
