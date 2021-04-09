@@ -17,31 +17,35 @@
 <body>
   <div class="form">
     <form>
-      <p><label>First Name:</label>
-        <input type="text" name="firstName">
-      </p>
-      <p><label>Last Name:</label>
-      <input type="text" name="lastName">
-      </p>
-      <p>
-        <label>Email:</label>
-        <input type="text" name="email">
-      </p>
-      <p>
-        <label>Confirm Email:</label>
-        <input type="text" name="confirmEmail">
-      </p>
-      <p class="file">
+      <div>
+        <div class="input-box" >
+          <p><label>First Name:</label></p>
+            <input type="text" name="firstName">
+        </div>
+        <div class="input-box" >
+          <p><label>Last Name:</label></p>
+          <input type="text" name="lastName">
+        </div>
+        <div class="input-box" style="clear:left;">
+          <p><label>Email:</label></p>
+            <input type="text" name="email">
+        </div>
+        <div class="input-box">
+          <p><label>Confirm Email:</label></p>
+            <input type="text" name="confirmEmail">
+        </div>
+    </div>
+      <div style="clear:left;padding-top:5px;">
         <p><label>Profile Picture/Avatar: </label></p>
         <p><img class="proifle-pic" src="../images/profileIcon.svg"></p>
         <label for="file-upload" class="custom-file-upload">
-          <i class="fa fa-cloud-upload"></i> Custom Upload
+          <i class="fa fa-cloud-upload"></i>Upload Picture
         </label>
         <input id="file-upload" type="file"/>
-      </p>
-      <p>
-        <button class="submit" type="submit" >Sign me up!</button>
-      </p>
+        <p>
+          <button class="submit" type="submit" >Sign me up!</button>
+        </p>
+      </div>
     </form>
   </div>
 </body>
