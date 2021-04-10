@@ -1,7 +1,7 @@
 $("#login-btn").on("click",(function(e){
-  var div = $('<div id="login"><p id="close" style="width:fit-content;">x</p>'+
-              '<form method="get" action="#" id="sampleForm"><input type="text" placeholder="Username"/><br>'+
-              '<input type="password" name="pass" id="pass" placeholder="Password" /><br>'+
+  var div = $('<div id="login"><script type="text/javascript" src="validate.js"></script><p id="close" style="width:fit-content;">x</p>'+
+              '<form method="POST" action="login.php" id="loginform"><input class="required" type="text" placeholder="Username"/><br>'+
+              '<input class="required" type="password" name="pass" id="pass" placeholder="Password" /><br>'+
               '<a style="font-size:small;padding:5px;" href="html/forgotpassword.html"><u>Forgot Password</u></a><br>'+
               '<button class="submit" id="login-submit" type="submit" >Login</button></form></div>');
 
@@ -16,5 +16,3 @@ $("#login-btn").on("click",(function(e){
   
   }));
 }));
-
-//

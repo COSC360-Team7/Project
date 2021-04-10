@@ -6,7 +6,7 @@
     <title>Coolblog - Sign up</title>
     <link rel="stylesheet" href="../css/sign-up.css"/>
     <link rel="stylesheet" href="../css/main.css"/>
-
+    <script type="text/javascript" src="../JSFiles/validate.js"></script>
 </head>
 <header>
   <div class="page-title">
@@ -16,36 +16,40 @@
 </header>
 <body>
   <div class="form">
-    <form>
+    <form method="POST" action="signup.php">
       <div style="margin: auto;">
         <div class="input-box" >
           <p><label>First Name:</label></p>
-            <input type="text" name="firstName">
+            <input class="required" type="text" name="firstName">
         </div>
         <div class="input-box" >
           <p><label>Last Name:</label></p>
-          <input type="text" name="lastName">
+          <input class="required" type="text" name="lastName">
         </div>
         <div class="input-box" style="clear:left;">
           <p><label>Email:</label></p>
-            <input type="text" name="email">
+            <input class="required" type="text" name="email">
         </div>
         <div class="input-box">
-          <p><label>Confirm Email:</label></p>
-            <input type="text" name="confirmEmail">
+          <p><label>Password:</label></p>
+            <input class="required" type="password" name="password">
+        </div>
+        <div class="input-box" style="clear:left;">
+          <p><label>Confirm Password:</label></p>
+            <input class="required" type="password" name="confirmpassword">
         </div>
     </div>
-      <div style="clear:left;padding-top:5px;">
-        <p><label>Profile Picture/Avatar: </label></p>
-        <p><img class="proifle-pic" src="../images/profileIcon.svg"></p>
-        <label for="file-upload" class="custom-file-upload">
-          <i class="fa fa-cloud-upload"></i>Upload Picture
-        </label>
-        <input id="file-upload" type="file"/>
-        <p>
-          <button class="submit-btn" type="submit" >Sign me up!</button>
-        </p>
-      </div>
+    <div style="clear:left;padding-top:5px;">
+      <p><label>Profile Picture/Avatar: </label></p>
+      <p><img class="proifle-pic" src="../images/profileIcon.svg"></p>
+      <label for="file-upload" class="custom-file-upload">
+        <i class="fa fa-cloud-upload"></i>Upload Picture
+      </label>
+      <input id="file-upload" type="file"/>
+      <p>
+        <input class="submit-btn" type="submit" value="Sign up!"/>
+      </p>
+    </div>
     </form>
   </div>
 </body>
@@ -89,4 +93,5 @@
       </div>
   </div>
 </footer>
+<script type="text/javascript" src="validate.js"></script>
 </html>
