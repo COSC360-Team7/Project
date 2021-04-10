@@ -1,8 +1,9 @@
 $("#login-btn").on("click",(function(e){
   var div = $('<div id="login"><p id="close" style="width:fit-content;">x</p>'+
-              '<h1>Registration</h1><form method="get" action="#" id="sampleForm"><input type="text" placeholder="Username"/><br>'+
+              '<form method="get" action="#" id="sampleForm"><input type="text" placeholder="Username"/><br>'+
               '<input type="password" name="pass" id="pass" placeholder="Password" /><br>'+
-              '<button id="login-submit" type="submit" >Login</button></form></div>');
+              '<a style="font-size:small;padding:5px;" href="html/forgotpassword.html"><u>Forgot Password</u></a><br>'+
+              '<button class="submit" id="login-submit" type="submit" >Login</button></form></div>');
 
   $(this).after(div);
   $("#login").fadeIn(1000);
