@@ -1,63 +1,21 @@
-  //check passwords
-
-function isBlank(inputField)
-{
-    if (inputField.value=="")
-    {
-	     return true;
-    }
-    return false;
-}
-
-function makeRed(inputDiv){
-	inputDiv.style.borderColor="#AA0000";
-}
-
-function makeClean(inputDiv){
-	inputDiv.style.borderColor="#FFFFFF";
-}
-function checkPasswordMatch(e){
-  var a = document.getElementById("password").value;
-  var b = document.getElementById("password-check").value;
-  if(a!=b){
-    e.preventDefault();
-    alert("Passwords do not match");
-    makeRed(document.getElementById("password"));
-    makeRed(document.getElementById("password-check"));
-    // err = true;
-    
-  }
-}
-window.onload = function()
-{
-    var mainForm = document.getElementById("loginform");
-    var requiredInputs = document.querySelectorAll(".required");
-
-    mainForm.onsubmit = function(e)
-    {
-	     var requiredInputs = document.querySelectorAll(".required");
-       var err = false;
-
-	     for (var i=0; i < requiredInputs.length; i++)
-       {
-	        if( isBlank(requiredInputs[i]))
-          {
-		          err |= true;
-		          makeRed(requiredInputs[i]);
-	        }
-	        else
-          {
-		          makeClean(requiredInputs[i]);
-	        }
-	    }
-      if (err == true)
-      {
+window.onload = function(){
+  //gets the form tag
+  var form = document.getElementById("form");
+  /*gets all the input elements and loops through them to checks if theyre null (empty)
+    and prevents submit if they are*/
+  form.onsubmit = function(e){
+    var inputs = document.getElementsByTagName("input");
+    console.log(inputs);
+    for(var i =0; i<inputs.length;i++){
+      if(inputs[i].value == "" ){
         e.preventDefault();
+        inputs[i].style.borderWidth = "1px";
+        inputs[i].style.borderColor = "red";
       }
-      else
-      {
-        console.log('checking match');
-        checkPasswordMatch(e);
-      }
+      //if the user is typing set the border to white
+        inputs[i].addEventListener("input",function(e){
+          e.target.style.borderColor="white";
+        });
     }
+  }
 }
