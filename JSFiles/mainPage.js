@@ -1,8 +1,9 @@
 window.onload = function(){
     $("#login-btn").on("click",(function(e){
     var div = $('<div id="login"><p id="close" style="width:fit-content;">x</p>'+
-                '<form method="POST" action="login.php" id="form"><input class="required" type="text" placeholder="Username"/><br>'+
-                '<input class="required" type="password" name="pass" id="pass" placeholder="Password" /><br>'+
+                '<form method="POST" action="PHP/login.php" id="form">' +
+                '<input class="required" type="text" name="username" id="username" placeholder="Username"/><br>'+
+                '<input class="required" type="password" name="password" id="password" placeholder="Password" /><br>'+
                 '<a style="font-size:small;padding:5px;" href="html/forgotpassword.html"><u>Forgot Password</u></a><br>'+
                 '<button class="submit" id="login-submit" type="submit" >Login</button></form></div>');
 
