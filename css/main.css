@@ -18,8 +18,9 @@ button:hover{
     box-shadow:none;
     border-bottom:0;
 }
-body {
+body{
     font-family: 'Open Sans', sans-serif;
+    margin:0;
 }
 .bgPrimary{
 background-color: rgb(123, 224, 216);
@@ -59,6 +60,7 @@ color:white
     padding: 0;
     cursor: pointer;
 }
+
 #login{
     position: absolute;
     background-color: #74d5f8;
@@ -84,7 +86,7 @@ input{
     margin:5px;
 }
 .container{
-    margin: 0 5%;
+    margin: 0 2%;
 }
 
 a{ 
