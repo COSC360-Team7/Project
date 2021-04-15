@@ -12,6 +12,8 @@
 button{
     outline:none;
     box-shadow: 1px 1px 3px grey;
+    border:0;
+    padding:5px;
 }
 button:hover{
     transform: translateY(2px);
@@ -88,6 +90,9 @@ input{
 .container{
     margin: 0 2%;
     padding: 2% 10%;
+}
+.full-width{
+    width:100%;
 }
 
 a{ 
@@ -282,7 +287,9 @@ main .tag{
 /*footer styling*/
 
 footer{
-    padding: 3em;
+    padding: 1em;
+    left:0;
+    bottom:0;
 }
 
 footer .title{

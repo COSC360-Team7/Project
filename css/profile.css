@@ -36,25 +36,31 @@ td{
   padding:10px;
 }
 
+tbody{
+  width:100%;
+  margin:1em 50%;
+}
+
 table{
-  margin:auto;
+  display: flex;
+  justify-content: center;
+  align-items: space-between;
+  margin:1em auto;
   width:60%;
   text-align: center;
   border-collapse: separate;
 }
 table tr, table td{
   width:fit-content;
+  margin: auto;
+  text-align: left;
 }
 .profile-container{
   display:flexbox;
   justify-content: center;
   align-items:space-between ;
-}
-
-footer{
-  left:0%;
-  bottom:0;
-  position: fixed;
+  margin:auto;
+  margin-bottom: 1em;
 }
 
 .form{

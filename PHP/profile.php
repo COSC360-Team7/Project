@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <!-- <meta name="viewprot" content="width=device-width"> -->
     <title>Coolblog - Sign up</title>
-    <link rel="stylesheet" href="../css/sign-up.css"/>
+    <link rel="stylesheet" href="../css/profile.css"/>
     <link rel="stylesheet" href="../css/main.css"/>
     <script type="text/javascript" src="../JSFiles/validate.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/904eedb8ad.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="JSFiles/jquery-3.1.1.min.js"></script>
 </head>
 <header>
   
-    <div class="container">
+    <div class="container full-width">
         <div class="flexbox align-items-center justify-content-between">
             <div class="contact-info">
                 <ul class="justify-content-evenly">
@@ -45,15 +49,29 @@
   
 <body>
   <section>
-    <div class="container">
+    <div class="profile-container">
       <table>
-          <tr>
-              <td><h3>Name:</td>
-              <td>Jill Neymar</td>
-          </tr>
-          <tr>
-              <td><h3>Name:</td>
-          </tr>
+          <tbody>
+                <tr>
+                    <td><h3>Name:</td>
+                    <td>Jill Neymar</td>
+                </tr>
+                <tr>
+                    <td><h3>Username:</td>
+                    <td>footballerman142</td>
+                </tr>
+                <tr>
+                    <td><h3>Username:</td>
+                    <td>footballerman142</td>
+                </tr>
+                <tr>
+                    <td><h3>Email:</td>
+                    <td>Jillnet@gmail.com</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center" colspan="2"><button type="submit" >Change Password</button></td>
+                </tr>
+          </tbody>
       </table>
     </div>
   </section>
