@@ -16,22 +16,11 @@ function makeRed(inputDiv){
 function makeClean(inputDiv){
 	inputDiv.style.borderColor="#FFFFFF";
 }
-function checkPasswordMatch(e){
-  var a = document.getElementById("password").value;
-  var b = document.getElementById("password-check").value;
-  if(a!=b){
-    e.preventDefault();
-    alert("Passwords do not match");
-    makeRed(document.getElementById("password"));
-    makeRed(document.getElementById("password-check"));
-    // err = true;
-    
-  }
-}
+
 window.onload = function()
 {
-    var mainForm = document.getElementById("loginform");
-    // var requiredInputs = document.querySelectorAll(".required");
+    var mainForm = document.getElementById("form");
+    var requiredInputs = document.querySelectorAll(".required");
 
     mainForm.onsubmit = function(e)
     {

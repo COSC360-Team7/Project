@@ -45,6 +45,10 @@ else
        /* while ($row = mysqli_fetch_assoc($results)) {
             echo $row['username'] . " " . $row['firstName'] . " " . $row['lastName'] . " " . $row['email'] . " " . $row['password'] . "<br/>";
         }*/
+        header("Location: profile.php");
+        $cookie_name = "user";
+        $cookie_value = $uname;
+        setcookie($cookie_name, $cookie_value);
     }
     else {
         echo "username and/or password is invalid";

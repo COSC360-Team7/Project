@@ -6,7 +6,22 @@
     <title>Coolblog - Sign up</title>
     <link rel="stylesheet" href="../css/sign-up.css"/>
     <link rel="stylesheet" href="../css/main.css"/>
-    <script type="text/javascript" src="../JSFiles/validate.js"></script>
+    <script type="text/javascript" src="../JSFiles/validate2.js"></script>
+      <script>
+          function checkPasswordMatch(e){
+              var pass= document.getElementById("password").value;
+              var cpass= document.getElementById("password-check").value;
+              if(pass != cpass){
+                  makeRed(document.getElementById("password"));
+                  makeRed(document.getElementById("password-check"));
+                  alert("passwords dont match :(");
+                  e.preventDefault();
+              }
+              /*else if(pass == cpass){
+                form submit
+              }*/
+          }
+      </script>
 </head>
 <header>
   <div class="page-title">
@@ -18,6 +33,10 @@
   <div class="form">
     <form method="POST" action="../PHP/newuser.php" id="form">
       <div style="margin: auto;">
+          <div class="input-box" >
+              <p><label>Username:</label></p>
+              <input class="required" type="text" name="username">
+          </div>
         <div class="input-box" >
           <p><label>First Name:</label></p>
             <input class="required" type="text" name="firstname">
@@ -47,7 +66,8 @@
       </label>
       <input id="file-upload" type="file"/>
       <p>
-        <button class="submit-btn" type="submit">Sign me up!</button>
+        <!--<button class="submit-btn" type="submit">Sign me up!</button>-->
+          <input type="submit" value="Sign me up!" class="submit-btn">
       </p>
     </div>
     </form>

@@ -3,7 +3,7 @@
 
 
 
-<div>
+
 <?php
 
 $host = "localhost";
@@ -14,7 +14,7 @@ $password = "P@ssw0rd";
 $connection = mysqli_connect($host, $user, $password, $database);
 
 $error = mysqli_connect_error();
-
+$output = "wtf";
 $fname = null;
 $lname = null;
 $uname = null;
@@ -39,7 +39,7 @@ if($error != null)
   exit($output);
 }
 else
-{
+{   echo "reached here inside else";
     //good connection, so do you thing
     $sql = "SELECT * FROM users WHERE username='$uname' OR email='$email';";
 
@@ -47,7 +47,6 @@ else
 
     if(mysqli_num_rows($results)!=0){
         echo "username and/or email already exists";
-        echo "<p><a href='../main.html'>Return</a></p>";
        /* while ($row = mysqli_fetch_assoc($results)) {
             echo $row['username'] . " " . $row['firstName'] . " " . $row['lastName'] . " " . $row['email'] . " " . $row['password'] . "<br/>";
         }*/
@@ -61,7 +60,7 @@ else
         }*/
 
         if(mysqli_query($connection, $nsql)){
-            echo "An account has been created";
+            $output = "An account has been created";
         }
         else{
             echo "error";
@@ -73,6 +72,6 @@ else
     mysqli_close($connection);
 }
 ?>
-</div>
+<p> yes</p>
 
 </html>
