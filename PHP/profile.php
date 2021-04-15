@@ -61,6 +61,7 @@ else
     <script src="https://kit.fontawesome.com/904eedb8ad.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
     <script type="text/javascript" src="JSFiles/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../JSFiles/profile.js"></script>
 </head>
 <header>
   
@@ -134,8 +135,22 @@ else
                     <td style="text-align:center" colspan="2"><button class="button" type="submit" >Change Password</button></td>
                 </tr>
                 <tr>
+                    <td><form action=""></form><label for="oldpassword"><b>Old Password:</b></label></td>
+                    <td><input type="password" name="oldpassword" id="oldpassword"></td>
+                    
+                </tr>
+                <tr>
+                    <td><label for="confirmpassword"><b>Confirm Password:</b></label></td>
+                    <td><input type="password" name="comfirmpassword" id="confirmpassword"></td>
+                    
+                </tr>
+                <tr>
+                    <td><label for="newpassword"><b>New Password:</b></label></td>
+                    <td><input type="password" name="newpassword" id="newpassword"></form></td>
+                </tr>
+                <tr>
                     <td><button class="saved-posts"><b >Saved Posts</b></button></td>
-                    <td><button class=" saved-posts "><b>Make a new blog post</b></button></td>
+                    <td><div class=" saved-posts "><b>Make a new blog post</b></div></td>
 
                 </tr>
                 
