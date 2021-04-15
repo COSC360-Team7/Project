@@ -37,8 +37,9 @@ td{
 }
 
 tbody{
-  width:100%;
+  width:60%;
   margin:1em 50%;
+  margin:0;
 }
 
 table{
@@ -48,13 +49,19 @@ table{
   margin:1em auto;
   width:60%;
   text-align: center;
-  border-collapse: separate;
+  border-collapse: collapse;
 }
 table tr, table td{
-  width:fit-content;
+  width:90%;
   margin: auto;
   text-align: left;
 }
+
+tr{
+  /* border: 1px solid black; */
+  
+}
+
 .profile-container{
   display:flexbox;
   justify-content: center;
