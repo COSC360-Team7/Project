@@ -70,8 +70,15 @@
                 </tr>
                 <tr>
                     <td><h3>Profile Picture:</td>
-                    <td><img src="../images/profileIcon.svg"></td>
+                    <td><img src="../images/profileIcon.svg"/></td>
                 </tr>
+                <tr>
+                    <td>
+                        <form>
+                        <input  type="file" name="changepicture" ></td>
+                        </form>
+                </tr>
+
                 <tr>
                     <td style="text-align:center" colspan="2"><button type="submit" >Change Password</button></td>
                 </tr>
