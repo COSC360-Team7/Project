@@ -93,7 +93,7 @@ else
                 <li class="nav-title"><a href="html/nav3.html">Following</a></li>
                 <li class="nav-title"><a href="PHP/profile.php">Profile</a></li>
                 <li class="nav-title" id="login-btn" style="cursor: pointer;">Login</li>
-                <li class="nav-title"><a href="PHP/profile.php">Logout</li>
+                <li class="nav-title"><a href="PHP/profile.php">Logout</a></li>
             </ul>
         </nav>
     </div>
@@ -103,7 +103,7 @@ else
   <section>
     <div class="profile-container">
       <table>
-          <tbody>
+          <tbody id="here">
                 <tr>
                     <td><h3>Name:</td>
                     <td><?php echo $fname." ".$lname ?></td>
@@ -126,16 +126,18 @@ else
                 </tr>
                 <tr>
                     <td>
-                        <form>
-                        <input  type="file" name="changepicture" ></td>
-                        </form>
+                       
+                        <input  type="file" name="changepicture" >
+                        
+                    </td>
                 </tr>
-
+                
                 <tr>
                     <td style="text-align:center" colspan="2"><button class="button" type="submit" >Change Password</button></td>
                 </tr>
+                
                 <tr>
-                    <td><form action=""></form><label for="oldpassword"><b>Old Password:</b></label></td>
+                    <td><label for="oldpassword"><b>Old Password:</b></label></td>
                     <td><input type="password" name="oldpassword" id="oldpassword"></td>
                     
                 </tr>
@@ -146,11 +148,12 @@ else
                 </tr>
                 <tr>
                     <td><label for="newpassword"><b>New Password:</b></label></td>
-                    <td><input type="password" name="newpassword" id="newpassword"></form></td>
+                    <td><input type="password" name="newpassword" id="newpassword"></td>
                 </tr>
+                
                 <tr>
                     <td><button class="saved-posts"><b >Saved Posts</b></button></td>
-                    <td><div class=" saved-posts "><b>Make a new blog post</b></div></td>
+                    <td><div class=" saved-posts" id="new-post"><b>Make a new blog post</b></div></td>
 
                 </tr>
                 

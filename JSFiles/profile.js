@@ -9,7 +9,7 @@ window.onload = function(){
         '<input type="submit" value="Make new Post">'+
       '</div>');
     $("#here").after(div);
-    div.fadeIn(600);
+    div.fadeIn(600);0
   });
   $("#close").on("click",(function(e){
     $("#login").fadeOut(1000);
