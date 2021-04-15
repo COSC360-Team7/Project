@@ -80,7 +80,10 @@
                 </tr>
 
                 <tr>
-                    <td style="text-align:center" colspan="2"><button type="submit" >Change Password</button></td>
+                    <td style="text-align:center" colspan="2"><button class="button" type="submit" >Change Password</button></td>
+                </tr>
+                <tr>
+                    <td colspan="1" ><button class="saved-posts"><b >Saved Posts</b></button></td>
                 </tr>
                 
           </tbody>
