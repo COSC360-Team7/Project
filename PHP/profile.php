@@ -46,9 +46,15 @@
 <body>
   <section>
     <div class="container">
-      <h1>Jill Nim</h1>
-      <h1>Profile Picture: <p><img class="proifle-pic" src="../images/profileIcon.svg"></p></h1>
-      <h1>Email: <h3 style="align-items:center;margin:auto;">jill1@gmail.com</h3></h1>
+      <table>
+          <tr>
+              <td><h3>Name:</td>
+              <td>Jill Neymar</td>
+          </tr>
+          <tr>
+              <td><h3>Name:</td>
+          </tr>
+      </table>
     </div>
   </section>
 </body>
