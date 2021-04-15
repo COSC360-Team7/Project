@@ -57,10 +57,10 @@ table tr, table td{
   text-align: left;
 }
 
-tr{
-  /* border: 1px solid black; */
+/* tr{
+  border: 1px solid black;
   
-}
+} */
 
 .saved-posts{
   border:1px solid black;
@@ -76,6 +76,7 @@ tr{
   transform: translateY(1px);
   box-shadow:none;
   cursor: pointer;
+  background-color: #dfdede;
   /* border-bottom:0; */
 }
 
