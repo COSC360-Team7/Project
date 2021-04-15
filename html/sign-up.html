@@ -10,10 +10,10 @@
       <script>
           function checkPasswordMatch(e){
               var pass= document.getElementById("password").value;
-              var cpass= document.getElementById("password-check").value;
+              var cpass= document.getElementById("confirmpassword").value;
               if(pass != cpass){
                   makeRed(document.getElementById("password"));
-                  makeRed(document.getElementById("password-check"));
+                  makeRed(document.getElementById("confirmpassword"));
                   alert("passwords dont match :(");
                   e.preventDefault();
               }
@@ -35,27 +35,27 @@
       <div style="margin: auto;">
           <div class="input-box" >
               <p><label>Username:</label></p>
-              <input class="required" type="text" name="username">
+              <input class="required" type="text" name="username" id="username">
           </div>
         <div class="input-box" >
           <p><label>First Name:</label></p>
-            <input class="required" type="text" name="firstname">
+            <input class="required" type="text" name="firstname" id="firstname">
         </div>
         <div class="input-box" >
           <p><label>Last Name:</label></p>
-          <input class="required" type="text" name="lastname">
+          <input class="required" type="text" name="lastname" id="lastname">
         </div>
         <div class="input-box" style="clear:left;">
           <p><label>Email:</label></p>
-            <input class="required" type="text" name="email">
+            <input class="required" type="text" name="email" id="email">
         </div>
         <div class="input-box">
           <p><label>Password:</label></p>
-            <input class="required" type="password" name="password">
+            <input class="required" type="password" name="password" id="password">
         </div>
         <div class="input-box" style="clear:left;">
           <p><label>Confirm Password:</label></p>
-            <input class="required" type="password" name="confirmpassword">
+            <input class="required" type="password" name="confirmpassword" id="confirmpassword">
         </div>
     </div>
     <div style="clear:left;padding-top:5px;">
