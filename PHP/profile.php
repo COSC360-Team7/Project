@@ -1,4 +1,54 @@
 <!DOCTYPE html>
+<?php
+
+$host = "localhost";
+$database = "cosc360_project";
+$user = "webuser";
+$password = "P@ssw0rd";
+
+$connection = mysqli_connect($host, $user, $password, $database);
+
+$error = mysqli_connect_error();
+
+$uname = $_COOKIE["user"];
+$fname = null;
+$lname = null;
+$email = null;
+
+
+
+if($error != null)
+{
+    $output = "<p>Unable to connect to database!</p>";
+    exit($output);
+}
+else
+{
+
+    //good connection, so do you thing
+    $sql = "SELECT * FROM users WHERE username='$uname';";
+
+    $results = mysqli_query($connection, $sql);
+
+    if(mysqli_num_rows($results)!=0){
+        //echo "username has a valid account";
+        while ($row = mysqli_fetch_assoc($results)) {
+             $fname= $row['firstName'] ;
+            $lname= $row['lastName'];
+            $email= $row['email'];
+         }
+
+    }
+    else {
+        $fname= "na" ;
+        $lname= "na";
+        $email= "na";
+    }
+
+    mysqli_free_result($results);
+    mysqli_close($connection);
+}
+?>
 <html lang="eng">
   <head>
     <meta charset="UTF-8">
@@ -37,11 +87,12 @@
         </div>
         <nav>
             <ul class="flexbox justify-content-center justify-content-evenly">
-                <li class="nav-title"><a href="main.html">Home</a></li>
+                <li class="nav-title"><a href="../main.html">Home</a></li>
                 <li class="nav-title"><a href="html/nav2.html">Popular</a></li>
                 <li class="nav-title"><a href="html/nav3.html">Following</a></li>
                 <li class="nav-title"><a href="PHP/profile.php">Profile</a></li>
                 <li class="nav-title" id="login-btn" style="cursor: pointer;">Login</li>
+                <li class="nav-title"><a href="PHP/profile.php">Logout</li>
             </ul>
         </nav>
     </div>
@@ -54,11 +105,11 @@
           <tbody>
                 <tr>
                     <td><h3>Name:</td>
-                    <td>Jill Neymar</td>
+                    <td><?php echo $fname." ".$lname ?></td>
                 </tr>
                 <tr>
                     <td><h3>Username:</td>
-                    <td>footballerman142</td>
+                    <td><?php echo $uname ?></td>
                 </tr>
                 <tr>
                     <td><h3>Username:</td>
@@ -66,7 +117,7 @@
                 </tr>
                 <tr>
                     <td><h3>Email:</td>
-                    <td>Jillnet@gmail.com</td>
+                    <td><?php echo $email ?></td>
                 </tr>
                 <tr>
                     <td><h3>Profile Picture:</td>
