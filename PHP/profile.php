@@ -14,6 +14,7 @@ $uname = $_COOKIE["user"];
 $fname = null;
 $lname = null;
 $email = null;
+$img= null;
 
 
 
@@ -36,6 +37,7 @@ else
              $fname= $row['firstName'] ;
             $lname= $row['lastName'];
             $email= $row['email'];
+            $img= $row['pfp'];
          }
 
     }
@@ -108,7 +110,7 @@ else
                 <li class="nav-title"><a href="html/nav3.html">Following</a></li>
                 <!--<li class="nav-title"><a href="PHP/profile.php">Profile</a></li>-->
                 <li class="nav-title" id="login-btn" style="cursor: pointer;">Login</li>
-                <li class="nav-title"><a href="PHP/logout.php">Logout</a></li>
+                <li class="nav-title"><a href="logout.php">Logout</a></li>
             </ul>
         </nav>
     </div>
@@ -120,24 +122,25 @@ else
       <table>
           <tbody>
                 <tr>
-                    <td><h3>Name:</td>
-                    <td><?php echo $fname." ".$lname ?></td>
+                    <td><h3> First Name:</td>
+                    <td><?php echo $fname ?></td>
+                </tr>
+                <tr>
+                    <td><h3>last Name:</td>
+                    <td><?php echo $lname ?></td>
                 </tr>
                 <tr>
                     <td><h3>Username:</td>
                     <td><?php echo $uname ?></td>
                 </tr>
-                <tr>
-                    <td><h3>Username:</td>
-                    <td>footballerman142</td>
-                </tr>
+
                 <tr>
                     <td><h3>Email:</td>
                     <td><?php echo $email ?></td>
                 </tr>
                 <tr>
                     <td><h3>Profile Picture:</td>
-                    <td><img src="../images/profileIcon.svg"/></td>
+                    <td><img src="<?php echo $img ?>" style="width:200px;border-radius:50%"/></td>
                 </tr>
             </tbody>
         </table>
