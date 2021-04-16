@@ -263,7 +263,7 @@ else
                 '<p><label for="postcontent"><b>Blog Content:</b></label></p>'+
                 '<textarea id="postcontent" rows="8" cols="70" name="blogcontent"></textarea>'+
             '</div>'+
-            '<div class="input-box"><input class="buton" style="padding:3px;height:fit-content" type="submit" value="Make new post"></div></form></div>');
+            '<div class="input-box"><input class="button" style="padding:3px;height:fit-content" type="submit" value="Make new post"></div></form></div>');
    
     // $("#posts-btns").after(div);
     $("#post").slideDown();

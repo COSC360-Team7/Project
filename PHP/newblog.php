@@ -42,11 +42,10 @@ else
         /* while ($row = mysqli_fetch_assoc($results)) {
              echo $row['username'] . " " . $row['firstName'] . " " . $row['lastName'] . " " . $row['email'] . " " . $row['password'] . "<br/>";
          }*/
-        header("Location: ../html/blogpost.html");
+        header("Location: ../php/blogpost.php");
     }
     else {
         echo "not successful";
-        echo $uname;
     }
 
     mysqli_close($connection);
