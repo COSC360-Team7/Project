@@ -202,8 +202,21 @@ else
             <div class="input-box" style="clear:left"><input class="buton" style="padding:3px;height:fit-content" type="submit" value="Make new post"></div>
           </form>
         </div>
-        <div id="saved-posts" style="display:none;" class="profile-posts-container"><p style="margin-left:5em" id="close2">X</p>
-            <div class="input-box" > 
+        <div id="saved-posts" style="display:none;" class="profile-posts-container">
+           <div class="blog-post"><p style="margin-left:1em;cursor:pointer;" id="close2">X</p>
+                <img class="img" alt="img-alt" src="../images/rocket-in-clouds.jpg">
+                <div class="content">
+                    <input type="text">
+                    <h1>Blog post heading</h1>
+                    <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo omnis distinctio magnam! Molestiae suscipit minus delectus inventore expedita. Non molestiae veniam voluptatem vitae aperiam. Numquam dolorum fugit sint iste...</p>                      
+                        <div class="info flexbox justify-content-between">
+                            <p class="readMore bgPrimary"><a href="blogpost.php">>Read More</a></p>
+                            <div class="tagADate flexbox align-items-center">
+                                <p class="tag">Tag</p>
+                                <p class="date">date</p>
+                            </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -250,7 +263,7 @@ else
   </div>
 </footer>
 <script type="text/javascript">
-var savedpostsbtn = $("Sposts");
+var savedpostsbtn = $("#Sposts");
     savedpostsbtn.on("click", function(e){
         $("#saved-posts").slideDown();
         $("#close2").on("click",(function(e){
