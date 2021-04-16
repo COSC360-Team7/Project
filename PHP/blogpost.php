@@ -34,7 +34,6 @@ else
 
     //good connection, so do you thing
     $sql = "SELECT * FROM blogs WHERE title='$passed';";
-
     $results = mysqli_query($connection, $sql);
 
     if(mysqli_num_rows($results)!=0){
@@ -110,7 +109,7 @@ else
 
 <section class="blog-detail">
         <div class="img-container text-align-center">
-        <img class="img-detail" alt="img-alt" src="../images/boat-5889919_1280.png">
+        <img class="img-detail" alt="img-alt" src="<?php echo $img ?>">
     </div>
     <div class="blog-text">
         <h2><?php echo $title ?></h2>
