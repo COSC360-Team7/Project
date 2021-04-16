@@ -16,8 +16,6 @@ button{
     outline:none;
     box-shadow: 1px 1px 3px grey;
     border:0;
-    width:fit-content;
-    height: fit-content;
     padding:5px;
 }
 .button:hover{
@@ -26,18 +24,6 @@ button{
     border-bottom:0;
     cursor: pointer;
 }
-
-.form{
-    display: flex;
-    justify-content: center;
-    align-items: space-between;
-    margin:auto;
-    margin-bottom: 15px;
-    width: 60%;
-    background-color: aliceblue;
-    padding-top:15px;
-    padding-bottom: 15px;
-  }
 body{
     font-family: 'Open Sans', sans-serif;
     margin:0;
@@ -109,6 +95,7 @@ input{
     margin: 0 2%;
     padding: 2% 10%;
 }
+
 .full-width{
     width:100%;
 }
@@ -129,12 +116,6 @@ ul{
 .g-3-col{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 1em;
-}
-
-.g-1-2-col{
-    display:grid;
-    grid-template-columns: 1fr 2fr;
     grid-column-gap: 1em;
 }
 
@@ -233,6 +214,7 @@ main{
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     animation: gradient 8s ease infinite;
+    display:none;
 }
 /*not working*/ 
 /* .container div div:nth-child(even){
@@ -284,6 +266,12 @@ main .tag{
     border: 0.5pt solid lightgray;
     background-color: white;
     color:rgb(123, 224, 216);
+    transition:0.3s;
+
+}
+.btn-load:hover{
+    opacity:0.7;
+
 }
 
 /*blogpost styling*/
@@ -340,9 +328,49 @@ footer .title > span{
     color: white;
 }
 
-/*needs to be implemented later for responsiveness for mobile devices */
-@media (max-width:500px){
+/* extra responsiveness with mobile devices */
+@media (min-width:200px) and (max-width:800px){
     .flexbox{
         flex-direction: column;
     }
+
+    header .contact-info {
+       width: 100%;
+       font-size: 0.5em;
+    }
+    
+    header .sns{
+        width:100%;
+    }
+
+
+    nav ul li{
+        margin: 0.5em 0;
+        padding: 0.5em 0;
+        text-align: center;
+        background-color: rgb(32, 132, 179);
+    }
+
+    nav .nav-title{
+        font-size: 1em;
+    }
+
+    .g-3-col{
+        grid-template-columns: 1fr;
+    }
+
+    .blog-post .info .flexbox{
+        flex-direction: row;
+    }
+    
+    .sns .flexbox{
+        flex-direction: row;
+    }
+
+    footer .flexbox{
+        flex-direction: row;
+    }
+
+    
+   
 }
