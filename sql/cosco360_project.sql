@@ -35,7 +35,7 @@ CREATE TABLE `users` (
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `admin` boolean NOT NULL,
-  `pfp` longblob
+  `pfp` varchar(255)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE `blogs` (

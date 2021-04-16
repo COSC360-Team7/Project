@@ -15,11 +15,10 @@ $connection = mysqli_connect($host, $user, $password, $database);
 
 $error = mysqli_connect_error();
 
-$uname = null;
+$uname = $_COOKIE["user"];
 $opass = null;
 $npass = null;
 if($_SERVER["REQUEST_METHOD"] == "POST") {
-    $uname= isset($_POST['username']) ? $_POST['username'] : null;
     $opass= isset($_POST['oldpassword']) ? $_POST['oldpassword'] : null;
     $npass= isset($_POST['newpassword']) ? $_POST['newpassword'] : null;
 }
@@ -46,7 +45,9 @@ else
         $enpass= md5($npass);
         $nsql= "UPDATE users SET password='$enpass' WHERE username='$uname' AND password='$epass';";
         if(mysqli_query($connection, $nsql)){
+            header("Location: profile.php");
             echo "user's password has been updated";
+
         }
 
        /* while ($row = mysqli_fetch_assoc($results)) {

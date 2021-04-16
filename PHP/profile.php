@@ -56,12 +56,27 @@ else
     <title>Coolblog - Sign up</title>
     <link rel="stylesheet" href="../css/profile.css"/>
     <link rel="stylesheet" href="../css/main.css"/>
-    <script type="text/javascript" src="../JSFiles/validate.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/904eedb8ad.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
-    <script type="text/javascript" src="JSFiles/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../JSFiles/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="../JSFiles/profile.js"></script>
+      <script type="text/javascript" src="../JSFiles/validate2.js"></script>
+      <script>
+          function checkPasswordMatch(e){
+              var pass= document.getElementById("password").value;
+              var cpass= document.getElementById("confirmpassword").value;
+              if(pass != cpass){
+                  makeRed(document.getElementById("password"));
+                  makeRed(document.getElementById("confirmpassword"));
+                  alert("passwords dont match :(");
+                  e.preventDefault();
+              }
+              /*else if(pass == cpass){
+                form submit
+              }*/
+          }
+      </script>
 </head>
 <header>
   
@@ -91,9 +106,9 @@ else
                 <li class="nav-title"><a href="../main.html">Home</a></li>
                 <li class="nav-title"><a href="html/nav2.html">Popular</a></li>
                 <li class="nav-title"><a href="html/nav3.html">Following</a></li>
-                <li class="nav-title"><a href="PHP/profile.php">Profile</a></li>
+                <!--<li class="nav-title"><a href="PHP/profile.php">Profile</a></li>-->
                 <li class="nav-title" id="login-btn" style="cursor: pointer;">Login</li>
-                <li class="nav-title"><a href="PHP/profile.php">Logout</li>
+                <li class="nav-title"><a href="PHP/logout.php">Logout</a></li>
             </ul>
         </nav>
     </div>
@@ -124,38 +139,45 @@ else
                     <td><h3>Profile Picture:</td>
                     <td><img src="../images/profileIcon.svg"/></td>
                 </tr>
-                <tr>
+          </tbody>
+      </table>
+               <!-- <tr>
                     <td>
                         <form>
                         <input  type="file" name="changepicture" ></td>
                         </form>
-                </tr>
+                </tr>-->
 
+                <form method="POST" action="changepassword.php" id="form">
+                <table>
                 <tr>
-                    <td style="text-align:center" colspan="2"><button class="button" type="submit" >Change Password</button></td>
-                </tr>
-                <tr>
-                    <td><form action=""></form><label for="oldpassword"><b>Old Password:</b></label></td>
-                    <td><input type="password" name="oldpassword" id="oldpassword"></td>
-                    
-                </tr>
-                <tr>
-                    <td><label for="confirmpassword"><b>Confirm Password:</b></label></td>
-                    <td><input type="password" name="comfirmpassword" id="confirmpassword"></td>
+                    <td><label for="oldpassword"><b>Old Password:</b></label></td>
+                    <td><input type="password" name="oldpassword" id="oldpassword" class="required"></td>
                     
                 </tr>
                 <tr>
                     <td><label for="newpassword"><b>New Password:</b></label></td>
-                    <td><input type="password" name="newpassword" id="newpassword"></form></td>
+                    <td><input type="password" name="newpassword" id="password" class="required"></form></td>
                 </tr>
                 <tr>
+                    <td><label for="confirmpassword"><b>Confirm Password:</b></label></td>
+                    <td><input type="password" name="comfirmpassword" id="confirmpassword" class="required"></td>
+                    
+                </tr>
+                <tr>
+                    <td style="text-align:center" colspan="2"><input type="submit" value="Change Password" class="button"></td>
+                </tr>
+                </table>
+                </form>
+
+                <!--<tr>
                     <td><button class="saved-posts"><b >Saved Posts</b></button></td>
                     <td><div class=" saved-posts "><b>Make a new blog post</b></div></td>
 
-                </tr>
+                </tr>-->
                 
-          </tbody>
-      </table>
+
+
     </div>
   </section>
 </body>
@@ -199,5 +221,4 @@ else
       </div>
   </div>
 </footer>
-<script type="text/javascript" src="validate.js"></script>
 </html>
