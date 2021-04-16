@@ -185,7 +185,7 @@ else
         </div>
         
         <div id="post" style="display:none" class="profile-posts-container"><p style="margin-left:5em" id="close">X</p>
-          <form>
+          <form method="POST" action="newblog.php">
             <div class="input-box" > 
                 <p><label for="posttitle"><b>Blog Title:</b></label></p>
                 <input id="posttitle" type="text" name="posttitle">
@@ -199,6 +199,7 @@ else
                 <p><label for="postcontent"><b>Blog Content:</b></label></p>
                 <textarea id="postcontent" rows="8" cols="70" name="blogcontent"></textarea>
             </div>
+            <div class="input-box" style="clear:left"><input class="buton" style="padding:3px;height:fit-content" type="submit" value="Make new post"></div>
           </form>
         </div>
      
