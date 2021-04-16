@@ -184,7 +184,7 @@ else
             <span id="new-post" style="text-align:right" class="button span"><b>New Posts</b></span>
         </div>
         
-        <!-- <div id="post" class="profile-posts-container">
+        <div id="post" style="display:none" class="profile-posts-container"><p style="margin-left:5em" id="close">X</p>
           <form>
             <div class="input-box" > 
                 <p><label for="posttitle"><b>Blog Title:</b></label></p>
@@ -200,7 +200,7 @@ else
                 <textarea id="postcontent" rows="8" cols="70" name="blogcontent"></textarea>
             </div>
           </form>
-        </div> -->
+        </div>
      
     </div>
   </section>
@@ -264,13 +264,14 @@ else
                 '<textarea id="postcontent" rows="8" cols="70" name="blogcontent"></textarea>'+
             '</div>'+
             '<div class="input-box"><input class="buton" style="padding:3px;height:fit-content" type="submit" value="Make new post"></div></form></div>');
-            $("#post").fadeIn(1000);
-    $("#posts-btns").after(div);
+   
+    // $("#posts-btns").after(div);
+    $("#post").slideDown();
     
     //closes the new post form
     $("#close").on("click",(function(e){
-      $("#post").fadeOut(1000);
-      $("#post").remove();
+      $("#post").slideUp(600);
+    //   $("#post").remove();
       console.log("this method is called");
       // e.preventDefault();
     
