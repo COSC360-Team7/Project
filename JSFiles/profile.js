@@ -19,7 +19,7 @@ window.onload = function(){
   
   }));
   var newpostbtn = $("#new-post");
-  newpostbtn.on("click", function(e){
+  newpostbtn.on("mouseenter", function(e){
     var div = $('<div id="post" class="profile-posts-container">'+
           '<form><div class="input-box" > '+
                 '<p><label for="posttitle"><b>Blog Title:</b></label></p>'+
