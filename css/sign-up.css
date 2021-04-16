@@ -16,17 +16,6 @@ header{
   font-size: x-large;
 }
 
-.form{
-  display: flex;
-  justify-content: center;
-  /* align-items: space-between; */
-  margin:auto;
-  margin-bottom: 15px;
-  width: 60%;
-  background-color: aliceblue;
-  padding-top:15px;
-  padding-bottom: 15px;
-}
 .input-box{
   overflow: auto;
   margin: 5px 5px;

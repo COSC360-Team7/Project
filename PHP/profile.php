@@ -139,45 +139,30 @@ else
                     <td><h3>Profile Picture:</td>
                     <td><img src="../images/profileIcon.svg"/></td>
                 </tr>
-          </tbody>
-      </table>
-               <!-- <tr>
-                    <td>
-                        <form>
-                        <input  type="file" name="changepicture" ></td>
-                        </form>
-                </tr>-->
-
-                <form method="POST" action="changepassword.php" id="form">
-                <table>
-                <tr>
-                    <td><label for="oldpassword"><b>Old Password:</b></label></td>
-                    <td><input type="password" name="oldpassword" id="oldpassword" class="required"></td>
-                    
-                </tr>
-                <tr>
-                    <td><label for="newpassword"><b>New Password:</b></label></td>
-                    <td><input type="password" name="newpassword" id="password" class="required"></form></td>
-                </tr>
-                <tr>
-                    <td><label for="confirmpassword"><b>Confirm Password:</b></label></td>
-                    <td><input type="password" name="comfirmpassword" id="confirmpassword" class="required"></td>
-                    
-                </tr>
-                <tr>
-                    <td style="text-align:center" colspan="2"><input type="submit" value="Change Password" class="button"></td>
-                </tr>
-                </table>
-                </form>
-
-                <!--<tr>
-                    <td><button class="saved-posts"><b >Saved Posts</b></button></td>
-                    <td><div class=" saved-posts "><b>Make a new blog post</b></div></td>
-
-                </tr>-->
+            </tbody>
+        </table>
+        <div class="change-password-form">
+            <form  method="POST" action="changepassword.php" id="form">
+                <p style="text-align:center"><input type="submit" value="Change Password" class="button"></p>
+                <div class="input-box">
+                    <label style="display:block; text-align:center;" for="oldpassword"><b>Old Password:</b></label>
+                    <input type="password" name="oldpassword" id="oldpassword" class="required">
+                </div><br>
+                <div class="input-box">     
+                    <label style="display:block; text-align:center;" for="newpassword"><b>New Password:</b></label>
+                    <input type="password" name="newpassword" id="password" class="required">
+                </div>
+                <div class="input-box" style="clear:left">
+                    <label style="display:block; text-align:center;" for="confirmpassword"><b>Confirm Password:</b></label>
+                    <input type="password" name="comfirmpassword" id="confirmpassword" class="required">
+                </div>
                 
-
-
+            </form>     
+        </div>           
+        <div class="saved-posts-container" >
+            <span style="margin-right:72%" class="button span"><b>Saved Posts</b></span>
+            <span style="text-align:right" class="button span"><b>New Posts</b></span>
+        </div>
     </div>
   </section>
 </body>

@@ -16,6 +16,8 @@ button{
     outline:none;
     box-shadow: 1px 1px 3px grey;
     border:0;
+    width:fit-content;
+    height: fit-content;
     padding:5px;
 }
 .button:hover{
@@ -24,6 +26,18 @@ button{
     border-bottom:0;
     cursor: pointer;
 }
+
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+    margin:auto;
+    margin-bottom: 15px;
+    width: 60%;
+    background-color: aliceblue;
+    padding-top:15px;
+    padding-bottom: 15px;
+  }
 body{
     font-family: 'Open Sans', sans-serif;
     margin:0;

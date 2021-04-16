@@ -61,6 +61,34 @@ table tr, table td{
   border: 1px solid black;
   
 } */
+.saved-posts-container{
+  margin: 10px 30%;
+  display: flex;
+  justify-self: space-between;
+  /* background-color: #7be0d8; */
+}
+
+.input-box{
+  overflow: auto;
+  margin: 5px 5px;
+  width: fit-content;
+  max-width: fit-content;
+  /* float:left; */
+}
+.span:hover{
+  background-color: #ccc;
+}
+.change-password-form{
+  display: flex;
+  justify-content: center;
+  align-items: space-between;
+  margin:auto;
+  margin-bottom: 15px;
+  width: 60%;
+  /* background-color: aliceblue; */
+  padding-top:15px;
+  padding-bottom: 15px;
+}
 
 .saved-posts{
   border:1px solid black;
