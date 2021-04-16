@@ -1,4 +1,10 @@
 <?php
+// Start the session
+session_start();
+?>
+<?php
+
+
 
 $host = "localhost";
 $database = "cosc360_project";
@@ -24,7 +30,7 @@ else if($_SERVER["REQUEST_METHOD"] == "GET") {
     exit();
 }
 
-
+$_SESSION["title"] = $title;
 if($error != null)
 {
     $output = "<p>Unable to connect to database!</p>";

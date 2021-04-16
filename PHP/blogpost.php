@@ -1,6 +1,11 @@
+<?php
+// Start the session
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <?php
+
 
 $host = "localhost";
 $database = "cosc360_project";
@@ -16,6 +21,7 @@ $category = null;
 $title = null;
 $content = null;
 $img= null;
+$passed= $_SESSION["title"];
 
 
 
@@ -27,7 +33,7 @@ else
 {
 
     //good connection, so do you thing
-    $sql = "SELECT * FROM blogs WHERE category='hockey';";
+    $sql = "SELECT * FROM blogs WHERE title='$passed';";
 
     $results = mysqli_query($connection, $sql);
 
@@ -107,19 +113,8 @@ else
         <img class="img-detail" alt="img-alt" src="../images/boat-5889919_1280.png">
     </div>
     <div class="blog-text">
-        <h2>Subtitle</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi molestiae vero veniam voluptatibus! Placeat culpa, nemo nam neque inventore, voluptas magnam molestias perspiciatis consequatur aliquid, nisi ipsa tempore fugit minima.</p>
-        <p>Voluptas quod recusandae inventore cupiditate, quae molestiae quasi sit eligendi corrupti omnis. Delectus voluptate perferendis dolores? Alias illum eum nulla beatae, minima adipisci laudantium dicta sapiente repellat, non optio corporis!</p>
-        <p>Minima debitis repellat doloremque rem exercitationem veniam numquam magni? Dignissimos consectetur magni tempora officiis minima repellendus optio eum sapiente laboriosam perspiciatis quisquam dolore iure voluptate ducimus, reiciendis voluptates ad fugit.</p>
-        <p>Tenetur officiis ex perspiciatis aspernatur, sunt repellendus, neque alias ad fugit obcaecati dolor ea adipisci sint harum reprehenderit a dolorem repellat fuga facere maiores vel numquam! Cum voluptate cupiditate vero.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi molestiae vero veniam voluptatibus! Placeat culpa, nemo nam neque inventore, voluptas magnam molestias perspiciatis consequatur aliquid, nisi ipsa tempore fugit minima.</p>
-        <p>Voluptas quod recusandae inventore cupiditate, quae molestiae quasi sit eligendi corrupti omnis. Delectus voluptate perferendis dolores? Alias illum eum nulla beatae, minima adipisci laudantium dicta sapiente repellat, non optio corporis!</p>
-        <p>Minima debitis repellat doloremque rem exercitationem veniam numquam magni? Dignissimos consectetur magni tempora officiis minima repellendus optio eum sapiente laboriosam perspiciatis quisquam dolore iure voluptate ducimus, reiciendis voluptates ad fugit.</p>
-        <p>Tenetur officiis ex perspiciatis aspernatur, sunt repellendus, neque alias ad fugit obcaecati dolor ea adipisci sint harum reprehenderit a dolorem repellat fuga facere maiores vel numquam! Cum voluptate cupiditate vero.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi molestiae vero veniam voluptatibus! Placeat culpa, nemo nam neque inventore, voluptas magnam molestias perspiciatis consequatur aliquid, nisi ipsa tempore fugit minima.</p>
-        <p>Voluptas quod recusandae inventore cupiditate, quae molestiae quasi sit eligendi corrupti omnis. Delectus voluptate perferendis dolores? Alias illum eum nulla beatae, minima adipisci laudantium dicta sapiente repellat, non optio corporis!</p>
-        <p>Minima debitis repellat doloremque rem exercitationem veniam numquam magni? Dignissimos consectetur magni tempora officiis minima repellendus optio eum sapiente laboriosam perspiciatis quisquam dolore iure voluptate ducimus, reiciendis voluptates ad fugit.</p>
-        <p>Tenetur officiis ex perspiciatis aspernatur, sunt repellendus, neque alias ad fugit obcaecati dolor ea adipisci sint harum reprehenderit a dolorem repellat fuga facere maiores vel numquam! Cum voluptate cupiditate vero.</p>
+        <h2><?php echo $title ?></h2>
+        <p> <?php echo $content ?></p>
     </article>
 </div>
 </section>
