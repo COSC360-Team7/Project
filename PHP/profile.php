@@ -117,7 +117,7 @@ else
 <body>
   <section>
     <div class="profile-container">
-      <table>
+      <table >
           <tbody>
                 <tr>
                     <td><h3>Name:</td>
@@ -142,6 +142,24 @@ else
             </tbody>
         </table>
         <div class="change-password-form">
+            <form>
+                <div class="input-box">
+                    <label>Change Email:</label>
+                    <input type="text" name="newemail">
+                </div>
+                <div class="input-box">
+                    <label>Change First Name:</label>
+                    <input type="text" name="newfirstname">
+                </div>
+                <div class="input-box">
+                    <label>Change Last Name:</label>
+                    <input type="text" name="newlastname">
+                    <p><input class="button" type="submit" value="Submit"></p>
+                </div>
+                
+            </form>
+        </div>
+        <div class="change-password-form" style="clear:left">
             <form  method="POST" action="changepassword.php" id="form">
                 <p style="text-align:center"><input type="submit" value="Change Password" class="button"></p>
                 <div class="input-box">
@@ -242,7 +260,7 @@ else
                 '<p><label for="postcontent"><b>Blog Content:</b></label></p>'+
                 '<textarea id="postcontent" rows="8" cols="70" name="blogcontent"></textarea>'+
             '</div>'+
-            '<div class="input-box"><input class="buton" type="submit" value="Make new post"></div></form></div>');
+            '<div class="input-box"><input class="buton" style="padding:3px;height:fit-content" type="submit" value="Make new post"></div></form></div>');
             $("#post").fadeIn(1000);
     $("#posts-btns").after(div);
     
