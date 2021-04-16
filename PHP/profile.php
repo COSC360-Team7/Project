@@ -250,7 +250,7 @@ else
   </div>
 </footer>
 <script type="text/javascript">
-var savedpostsbtn = $("Sposts");
+var savedpostsbtn = $("#Sposts");
     savedpostsbtn.on("click", function(e){
         $("#saved-posts").slideDown();
         $("#close2").on("click",(function(e){
