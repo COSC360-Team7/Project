@@ -69,7 +69,7 @@ table tr, table td{
 }
 
 .input-box{
-  overflow: auto;
+  /* overflow: auto; */
   margin: 5px 5px;
   width: fit-content;
   max-width: fit-content;
@@ -78,6 +78,20 @@ table tr, table td{
 .span:hover{
   background-color: #ccc;
 }
+
+.profile-posts-container{
+  display: flex;
+  justify-content: center;
+  align-items: space-between;
+  margin:auto;
+  margin-bottom: 15px;
+  height: fit-content;
+  width: fit-content;
+  background-color: aliceblue;
+  padding-top:15px;
+  padding-bottom: 15px;
+}
+
 .change-password-form{
   display: flex;
   justify-content: center;

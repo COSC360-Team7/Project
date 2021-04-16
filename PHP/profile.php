@@ -156,13 +156,31 @@ else
                     <label style="display:block; text-align:center;" for="confirmpassword"><b>Confirm Password:</b></label>
                     <input type="password" name="comfirmpassword" id="confirmpassword" class="required">
                 </div>
-                
             </form>     
         </div>           
-        <div class="saved-posts-container" >
+        <div id="posts-btns" class="saved-posts-container" >
             <span style="margin-right:72%" class="button span"><b>Saved Posts</b></span>
-            <span style="text-align:right" class="button span"><b>New Posts</b></span>
+            <span id="new-post" style="text-align:right" class="button span"><b>New Posts</b></span>
         </div>
+        
+        <!-- <div id="post" class="profile-posts-container">
+          <form>
+            <div class="input-box" > 
+                <p><label for="posttitle"><b>Blog Title:</b></label></p>
+                <input id="posttitle" type="text" name="posttitle">
+            </div>
+            <div class="input-box">
+                <p><label for="category"><b>Blog Category:</b></label></p>
+                <input id="postcategory" type="text" name="category" placeholder="fashion, sports, movies">
+            </div>
+            
+            <div class="input-box" >
+                <p><label for="postcontent"><b>Blog Content:</b></label></p>
+                <textarea id="postcontent" rows="8" cols="70" name="blogcontent"></textarea>
+            </div>
+          </form>
+        </div> -->
+     
     </div>
   </section>
 </body>
@@ -206,4 +224,36 @@ else
       </div>
   </div>
 </footer>
+<script type="text/javascript">
+    var newpostbtn = $("#new-post");
+    //shows the form for a new blog post
+    newpostbtn.on("click", function(e){
+    var div = $('<div id="post" class="profile-posts-container"><p style="margin-left:5em" id="close">X</p>'+
+        '<form><div class="input-box" > '+
+                '<p><label for="posttitle"><b>Blog Title:</b></label></p>'+
+                '<input id="posttitle" type="text" name="posttitle">'+
+                '</div>'+
+            '<div class="input-box">'+
+                '<p><label for="category"><b>Blog Category:</b></label></p>'+
+                '<input id="postcategory" type="text" name="category" placeholder="fashion, sports, movies">'+
+            '</div>'+
+            
+            '<div class="input-box" >'+
+                '<p><label for="postcontent"><b>Blog Content:</b></label></p>'+
+                '<textarea id="postcontent" rows="8" cols="70" name="blogcontent"></textarea>'+
+            '</div>'+
+            '<div class="input-box"><input class="buton" type="submit" value="Make new post"></div></form></div>');
+            $("#post").fadeIn(1000);
+    $("#posts-btns").after(div);
+    
+    //closes the new post form
+    $("#close").on("click",(function(e){
+      $("#post").fadeOut(1000);
+      $("#post").remove();
+      console.log("this method is called");
+      // e.preventDefault();
+    
+    }));
+  });
+</script>
 </html>
