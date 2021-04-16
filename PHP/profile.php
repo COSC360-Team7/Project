@@ -145,7 +145,7 @@ else
             </tbody>
         </table>
         <div class="change-password-form">
-            <form>
+            <form method="POST" action="changename.php">
                 <div class="input-box">
                     <label>Change Email:</label>
                     <input type="text" name="newemail">
@@ -159,7 +159,7 @@ else
                     <input type="text" name="newlastname">
                     <p><input class="button" type="submit" value="Submit"></p>
                 </div>
-                
+
             </form>
         </div>
         <div class="change-password-form" style="clear:left">
