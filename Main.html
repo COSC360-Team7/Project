@@ -58,8 +58,8 @@
 <nav>
     <ul class="flexbox justify-content-center justify-content-evenly">
         <li class="nav-title"><a href="Main.html">Home</a></li>
-        <li class="nav-title"><a href="html/nav2.html">Popular</a></li>
-        <li class="nav-title"><a href="html/nav3.html">Following</a></li>
+        <li class="nav-title"><a href="html/popular.html">Popular</a></li>
+        <li class="nav-title"><a href="html/following.html">Following</a></li>
         <li class="nav-title"><a href="PHP/profile.php">Profile</a></li>
         <li class="nav-title"><a href="html/sign-up.html">Sign up</a></li>
         <li class="nav-title" id="login-btn" style="cursor: pointer;">Login</li>
@@ -169,6 +169,60 @@
         </div>
         
     </div>
+    <!-- hidden articles are clicked with loadmore button --> 
+    <div class="container">
+        <div class="g-3-col">
+            <div>
+                <article class="blog-post">
+                    <img class="img" alt="img-alt" src="images/rocket-in-clouds.jpg">
+                    <div class="content">
+                        <h1>Blog post heading</h1>
+                        <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo omnis distinctio magnam! Molestiae suscipit minus delectus inventore expedita. Non molestiae veniam voluptatem vitae aperiam. Numquam dolorum fugit sint iste...</p>                        
+                            <div class="info flexbox justify-content-between">
+                                <p class="readMore bgPrimary"><a href="html/blogpost.html">Read More</a></p>
+                                <div class="tagADate flexbox align-items-center">
+                                    <p class="tag">Tag</p>
+                                    <p class="date">date</p>
+                                </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div>
+                <article class="blog-post">
+                    <img class="img" alt="img-alt" src="images/rocket-in-clouds.jpg">
+                    <div class="content">
+                        <h1>Blog post heading</h1>
+                        <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo omnis distinctio magnam! Molestiae suscipit minus delectus inventore expedita. Non molestiae veniam voluptatem vitae aperiam. Numquam dolorum fugit sint iste...</p>                       
+                            <div class="info flexbox justify-content-between">
+                                <p class="readMore bgPrimary"><a href="html/blogpost.html">Read More</a></p>
+                                <div class="tagADate flexbox align-items-center">
+                                    <p class="tag">Tag</p>
+                                    <p class="date">date</p>
+                                </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div>
+                <article class="blog-post">
+                    <img class="img" alt="img-alt" src="images/rocket-in-clouds.jpg">
+                    <div class="content">
+                        <h1>Blog post heading</h1>
+                        <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo omnis distinctio magnam! Molestiae suscipit minus delectus inventore expedita. Non molestiae veniam voluptatem vitae aperiam. Numquam dolorum fugit sint iste...</p>                       
+                            <div class="info flexbox justify-content-between">
+                                <p class="readMore bgPrimary"><a href="html/blogpost.html">Read More</a></p>
+                                <div class="tagADate flexbox align-items-center">
+                                    <p class="tag">Tag</p>
+                                    <p class="date">date</p>
+                                </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+        
+    </div>
     <div class="btn-container flexbox justify-content-center" style="clear:left">
         <button class="btn-load button">Load More</a>
     </div>
@@ -215,7 +269,15 @@
     </div>
 </footer>
 
-
+<script>
+    $(".blog-post").slice(0,6).show();
+    $(".btn-load").on("click", function() {
+        $(".blog-post:hidden").slice(0,3).slideDown();
+        if($(".blog-post:hidden").length==0){
+            $(".btn-load").fadeOut('slow');
+        }
+    }) 
+</script>
 </body>
 <script type="text/javascript" src="JSFiles/mainPage.js"></script>
 
