@@ -95,6 +95,7 @@ input{
     margin: 0 2%;
     padding: 2% 10%;
 }
+
 .full-width{
     width:100%;
 }
@@ -213,6 +214,7 @@ main{
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     animation: gradient 8s ease infinite;
+    display:none;
 }
 /*not working*/ 
 /* .container div div:nth-child(even){
@@ -264,6 +266,12 @@ main .tag{
     border: 0.5pt solid lightgray;
     background-color: white;
     color:rgb(123, 224, 216);
+    transition:0.3s;
+
+}
+.btn-load:hover{
+    opacity:0.7;
+
 }
 
 /*blogpost styling*/
