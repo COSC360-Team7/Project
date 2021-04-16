@@ -62,7 +62,7 @@ else
     <script src="https://kit.fontawesome.com/904eedb8ad.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
     <script type="text/javascript" src="../JSFiles/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="../JSFiles/profile.js"></script>
+    <!-- <script type="text/javascript" src="../JSFiles/profile.js"></script> -->
       <script type="text/javascript" src="../JSFiles/validate2.js"></script>
       <script>
           function checkPasswordMatch(e){
@@ -180,7 +180,7 @@ else
             </form>     
         </div>           
         <div id="posts-btns" class="saved-posts-container" >
-            <span style="margin-right:72%" class="button span"><b>Saved Posts</b></span>
+            <span id="Sposts" style="margin-right:72%" class="button span"><b>Saved Posts</b></span>
             <span id="new-post" style="text-align:right" class="button span"><b>New Posts</b></span>
         </div>
         
@@ -202,7 +202,10 @@ else
             <div class="input-box" style="clear:left"><input class="buton" style="padding:3px;height:fit-content" type="submit" value="Make new post"></div>
           </form>
         </div>
-     
+        <div id="saved-posts" style="display:none;" class="profile-posts-container"><p style="margin-left:5em" id="close2">X</p>
+            <div class="input-box" > 
+            </div>
+        </div>
     </div>
   </section>
 </body>
@@ -247,36 +250,24 @@ else
   </div>
 </footer>
 <script type="text/javascript">
+var savedpostsbtn = $("Sposts");
+    savedpostsbtn.on("click", function(e){
+        $("#saved-posts").slideDown();
+        $("#close2").on("click",(function(e){
+             $("#saved-posts").slideUp(600);
+        }));
+    });
     var newpostbtn = $("#new-post");
     //shows the form for a new blog post
     newpostbtn.on("click", function(e){
-    var div = $('<div id="post" class="profile-posts-container"><p style="margin-left:5em" id="close">X</p>'+
-        '<form method="POST" action="newblog.php"><div class="input-box" > '+
-                '<p><label for="posttitle"><b>Blog Title:</b></label></p>'+
-                '<input id="posttitle" type="text" name="posttitle">'+
-                '</div>'+
-            '<div class="input-box">'+
-                '<p><label for="category"><b>Blog Category:</b></label></p>'+
-                '<input id="postcategory" type="text" name="category" placeholder="fashion, sports, movies">'+
-            '</div>'+
-            
-            '<div class="input-box" >'+
-                '<p><label for="postcontent"><b>Blog Content:</b></label></p>'+
-                '<textarea id="postcontent" rows="8" cols="70" name="blogcontent"></textarea>'+
-            '</div>'+
-            '<div class="input-box"><input class="buton" style="padding:3px;height:fit-content" type="submit" value="Make new post"></div></form></div>');
-   
-    // $("#posts-btns").after(div);
-    $("#post").slideDown();
+        //shows the new blog post form
+        $("#post").slideDown();
+        
+        //closes the new post form
+        $("#close").on("click",(function(e){
+             $("#post").slideUp(600);
+        }));
+    });
     
-    //closes the new post form
-    $("#close").on("click",(function(e){
-      $("#post").slideUp(600);
-    //   $("#post").remove();
-      console.log("this method is called");
-      // e.preventDefault();
-    
-    }));
-  });
 </script>
 </html>
