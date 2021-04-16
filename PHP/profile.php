@@ -250,7 +250,7 @@ else
     //shows the form for a new blog post
     newpostbtn.on("click", function(e){
     var div = $('<div id="post" class="profile-posts-container"><p style="margin-left:5em" id="close">X</p>'+
-        '<form><div class="input-box" > '+
+        '<form method="POST" action="newblog.php"><div class="input-box" > '+
                 '<p><label for="posttitle"><b>Blog Title:</b></label></p>'+
                 '<input id="posttitle" type="text" name="posttitle">'+
                 '</div>'+
