@@ -1,0 +1,63 @@
+header{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.page-title{
+  width:30%;
+  height:20%;
+  display: flex;
+  justify-content: center;
+  border: 0;
+  background-color: #7be0d8;
+}
+.page-title p{
+  font-size: x-large;
+}
+
+.input-box{
+  overflow: auto;
+  margin: 5px 5px;
+  width: fit-content;
+  max-width: fit-content;
+  float:left;
+}
+.proifle-pic{
+  width: 30%;
+  height:30%;
+  max-height: 120px;
+  max-width: 120px;
+  border:0;
+}
+input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: small;
+  margin-bottom:10px;
+}
+form{
+  margin: 5px 15%;
+  /* overflow: auto; */
+}
+.file{
+  display: flex;
+  align-items: flex-start;
+}
+.submit-btn{
+  height:40px;
+  width:auto;
+  border-radius: 30px;
+  border: 0px;
+  background-color: orangered;
+  margin: 10px;
+}
+.submit-btn:hover{
+  background-color: orange;
+  cursor: pointer;
+}

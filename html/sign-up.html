@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coolblog - Sign up</title>
+    <link rel="stylesheet" href="../css/sign-up.css"/>
+    <link rel="stylesheet" href="../css/main.css"/>
+    <script type="text/javascript" src="../JSFiles/validate2.js"></script>
+      <script>
+          function checkPasswordMatch(e){
+              var pass= document.getElementById("password").value;
+              var cpass= document.getElementById("confirmpassword").value;
+              if(pass != cpass){
+                  makeRed(document.getElementById("password"));
+                  makeRed(document.getElementById("confirmpassword"));
+                  alert("passwords dont match :(");
+                  e.preventDefault();
+              }
+              /*else if(pass == cpass){
+                form submit
+              }*/
+          }
+      </script>
+</head>
+<header>
+  <div class="page-title">
+    <p>Sign up!</p>
+  </div>
+  
+</header>
+<body>
+  <div class="form">
+    <form method="POST" action="../PHP/newuser.php" id="form">
+      <div style="margin: auto;">
+        <div class="input-box" >
+          <p><label>First Name:</label></p>
+            <input class="required" type="text" name="firstname" id="firstname">
+        </div>
+        <div class="input-box" >
+          <p><label>Last Name:</label></p>
+          <input class="required" type="text" name="lastname" id="lastname">
+        </div>
+        <div class="input-box" style="clear:left;">
+          <p><label>Email:</label></p>
+            <input class="required" type="text" name="email" id="email">
+        </div>
+        <div class="input-box" >
+          <p><label>Username:</label></p>
+          <input class="required" type="text" name="username" id="username">
+      </div>
+        <div class="input-box" style="clear:left">
+          <p><label>Password:</label></p>
+            <input class="required" type="password" name="password" id="password">
+        </div>
+        <div class="input-box" >
+          <p><label>Confirm Password:</label></p>
+            <input class="required" type="password" name="confirmpassword" id="confirmpassword">
+        </div>
+    </div>
+    <div style="clear:left;padding-top:5px;">
+      <p><label>Profile Picture/Avatar: </label></p>
+      <p><img class="proifle-pic" src="../images/profileIcon.svg"></p>
+      <label for="file-upload" class="custom-file-upload">
+        <i class="fa fa-cloud-upload"></i>Upload Picture
+      </label>
+      <input id="file-upload" type="file"/>
+      <p>
+        <!--<button class="submit-btn" type="submit">Sign me up!</button>-->
+          <input type="submit" value="Sign me up!" class="submit-btn">
+      </p>
+    </div>
+    </form>
+  </div>
+</body>
+<footer class="bgDark colorWhite" style="margin:0">
+  <div class="containeasdsadar" style="margin:0;">
+      <div class="g-3-col">
+          <div class="about-us text-align-center">
+              <h3>About Us</h3>
+              <p>We are students from UBCO taking COSC 360:Web Development course and this is our first web development project. Most of us are thrid year students and we work from different parts of the country</p>
+              <p>If you have any questions you can email us via the contact info</p>
+
+              <div class="sns">
+                  <ul class="flexbox justify-content-evenly">
+                      <li><a><i class="fab fa-twitter-square"></i></a></li>
+                      <li><a><i class="fab fa-facebook-square"></i></a></li>
+                      <li><a><i class="fab fa-flickr"></i></a></li>
+                      <li><a><i class="fab fa-youtube-square"></i></a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="tags text-align-center">
+          <div class="title-container">
+                  <a class="title" href="../Main.php">Cool<span> Blog</span></a> 
+              </div>
+          </div>
+          <div class="tos text-align-center">
+              <h3>Terms of Service</h3>
+              <p>Please read the following terms and conditions carefully.</p>
+              <p>By accessing Cool Blog website,mobile or tablet application, you agree to be bound by our terms and conditions.</p>
+          </div>
+      </div>
+      <div class="copyright text-align-center">
+          <p>Made by COSC360 &copy;All rights reserved</p>
+      </div>
+  </div>
+</footer>
+<script type="text/javascript" src="../JSFiles/validate.js"></script>
+</html>

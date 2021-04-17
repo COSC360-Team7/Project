@@ -1,0 +1,431 @@
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+button{
+    outline:0;
+}
+.button{
+    outline:none;
+    box-shadow: 1px 1px 3px grey;
+    border:0;
+    padding:8px;
+    width:fit-content;
+    height: fit-content;
+}
+.button:hover{
+    transform: translateY(2px);
+    box-shadow:none;
+    border-bottom:0;
+    cursor: pointer;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    margin:0;
+}
+.bgPrimary{
+background-color: rgb(123, 224, 216);
+}
+.bgSecondary{
+    background-color: rgb(32, 132, 179);
+    }
+
+.bgBlack{
+    background-color: black;
+}
+.bgDark{
+background-color: darkgray;
+}
+.bgWhite{
+background-color: white;
+}
+
+.colorPrimary{
+color:  rgb(123, 224, 216);
+}
+.colorSecondary{
+    color:  rgb(32, 132, 179);
+    }
+
+.colorDark{
+color: darkgray;
+}
+
+.colorWhite{
+color:white
+}
+
+/*general*/
+#close{
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+#login{
+    position: absolute;
+    background-color: #74d5f8;
+    width:fit-content;
+    height: fit-content;
+    padding: 20px;
+    left:55%;
+    top:85%;
+    font-family: 'Open Sans', sans-serif;
+}
+.submit{
+    height:30px;
+    width:5em;
+    border-radius: 15px;
+    border: 0px;
+    background-color: white;
+    margin: 10px;
+    cursor: pointer;
+  }
+input{
+    padding:5px;
+    height: 20px;
+    margin:5px;
+}
+.container{
+    margin: 0 2%;
+    padding: 2% 10%;
+}
+
+.full-width{
+    width:100%;
+}
+
+a{ 
+    text-decoration: none;
+    color:black;
+}
+
+ul{
+    list-style: none;
+}
+
+.flexbox{
+    display:flex;
+}
+
+.g-3-col{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1em;
+}
+
+.nav-section{
+    padding: 1em;
+    width: 100%;
+    /* position: absolute; */
+}
+nav{
+    width: 100%;
+    background-color: white;
+    position: -webkit-sticky;
+    position: sticky; /*sticky not working*/
+    top:0;
+    padding: 0;
+    /* height: 40px; */
+}
+nav ul {
+    height: 60px;
+    padding: 1em auto;
+    margin:auto;
+    vertical-align: middle;
+
+}
+nav ul li{
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+}
+/* 
+nav ul li a:hover{
+    border-bottom: 2px solid black;
+} */
+
+.nav-section h1{
+    font-size: 2em;
+}
+
+h1,h2,h3,h4{
+    margin:0;
+}
+
+.text-align-center{
+    text-align: center;
+}
+
+.justify-content-center{
+justify-content: center;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+
+.justify-content-evenly{
+    justify-content: space-evenly;
+}
+
+/* nav styling */
+.nav-title{
+    font-size: large;
+    font-weight: bold;
+}
+
+/*header styling*/
+
+header li{
+    margin: 1em;
+}
+
+header{
+    padding: 1em 0;
+}
+
+.title{
+    font-size: 2.0em;
+    font-weight: bold;
+    color:  rgb(57, 150, 142);
+}
+
+.title > span{
+    color:  rgb(32, 132, 179);
+    font-weight: none;
+}
+
+header .contact-info{
+    width:33%;
+}
+
+header .sns{
+    width:33%;
+}
+
+header nav{
+    padding: 0;
+}
+
+/*main styling*/
+
+main .img{
+    width:100%;
+    object-fit:cover;
+    
+}
+main{
+    margin-top: 70px; /*gives room for the nav bar*/
+}
+
+
+
+
+.content{
+    height: 160px;
+}
+
+.blog-post-container{
+    height: 100%;
+}
+.blog-post{
+    margin: 1em 0em;
+    box-shadow: -2px 2px 10px grey;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 8s ease infinite;
+    display:none;
+    /* height:85% ; */
+}
+/*not working*/ 
+/* .container div div:nth-child(even){
+    margin-top:40px;
+}
+
+.container div div:nth-child(odd){
+    margin-bottom:0px;
+}
+.container div div:nth-child(4){
+    margin-top:0px;
+} */
+h1{
+    text-align: center;
+}
+
+.summary{
+    margin: 0.5em 0.5em 0 0.5em;
+}
+
+.info{ 
+    margin:0 0.5em;
+    padding-top:8%;
+}
+
+.readMore{
+    padding: 0.3em;
+}
+
+main .tag{
+    margin-right: 1em;
+    background-color: rgb(32, 132, 179);
+    padding: 0.1em;
+}
+
+.date{
+    margin-left: 1em;
+    padding: 0.3em;
+    font-style: italic;
+}
+
+.btn-container{
+    margin:2em;
+}
+
+.btn-load{
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 1em 2em;
+    border: 0.5pt solid lightgray;
+    background-color: white;
+    color:rgb(123, 224, 216);
+    transition:0.3s;
+
+}
+.btn-load:hover{
+    opacity:0.7;
+
+}
+
+/*blogpost styling*/
+
+.blog-detail{
+    margin:1em;
+    padding:3em;
+}
+
+.blog-text{
+    line-height: 1.8;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.padding-comment{
+    padding-left:1em;
+}
+
+.comments-container{
+    border:1px solid lightgrey;
+    height: fit-content;
+    width: 100%;
+    padding:1em;
+}
+
+.img-detail{
+    width: 50%;
+    height:5%;
+    object-fit:cover;
+}
+.img{
+    min-height: 460px;
+    height: 460px;
+    max-height: 460px;
+}
+.blog-banner{
+    padding:1em;
+}
+
+/*footer styling*/
+
+footer{
+    padding: 1em;
+    left:0;
+    bottom:0;
+}
+
+footer .title{
+    font-size: 1em;
+    font-weight: bold;
+    color:  rgb(57, 150, 142);
+}
+
+footer .title > span{
+    color:  rgb(32, 132, 179);
+    font-weight: none;
+}
+
+.title-container{
+    margin-top: 1em;
+}
+
+.tags ul{
+    flex-wrap: wrap;
+}
+
+.tags .tag{
+    margin:1em;
+    padding: 0.1em;
+    background-color: rgb(32, 132, 179);
+}
+
+.tags .tag a{
+    font-size: 0.8em;
+    color: white;
+}
+
+/* extra responsiveness with mobile devices */
+@media (min-width:200px) and (max-width:800px){
+    .flexbox{
+        flex-direction: column;
+    }
+
+    header .contact-info {
+       width: 100%;
+       font-size: 0.5em;
+    }
+    
+    header .sns{
+        width:100%;
+    }
+
+
+    nav ul li{
+        margin: 0.5em 0;
+        padding: 0.5em 0;
+        text-align: center;
+        background-color: rgb(32, 132, 179);
+    }
+
+    nav .nav-title{
+        font-size: 1em;
+    }
+
+    .g-3-col{
+        grid-template-columns: 1fr;
+    }
+
+    .blog-post .info .flexbox{
+        flex-direction: row;
+    }
+    
+    .sns .flexbox{
+        flex-direction: row;
+    }
+
+    footer .flexbox{
+        flex-direction: row;
+    }
+
+    
+   
+}
