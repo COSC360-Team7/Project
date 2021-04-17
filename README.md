@@ -1,1 +1,2 @@
 # Project
+Cool blogs is a 3 column layout that lets users view blog posts that registered users have created. On the main page multiple posts can be viewed at a time with blogs’ category, date created, and thumbnail (image). If the user wants to read more about the blog, they can click the ‘read more’ button that will direct them to the specific blog post page where they can view more details about the post and see comments.
