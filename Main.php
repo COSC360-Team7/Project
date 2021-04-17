@@ -178,7 +178,7 @@ else
         <div class="g-3-col">
             <div class= "blog-post-container">
                 <article class="blog-post">
-                    <img class="img" alt="img-alt" src="<?php echo str_replace('../','',$blog1["picture"]) ?>">
+                    <img class="img" style="height:460px;" alt="img-alt" src="<?php echo str_replace('../','',$blog1["picture"]) ?>">
                     <div class="content">
                         <h1><?php echo $blog1["title"] ?></h1>
                         <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo omnis distinctio magnam! Molestiae suscipit minus delectus inventore expedita. Non molestiae veniam voluptatem vitae aperiam. Numquam dolorum fugit sint iste...</p>                        
