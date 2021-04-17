@@ -104,8 +104,8 @@ else
                             <td>'.$x.'</td>
                             <td>'.$user[$x].'</td>
                             <td> ? </td>
-                            <td><a href="#"class="edit">edit</a></td>
-                            <td><a href="removeuser.php?use='.$user[$x].'"class="remove">remove</a></td>
+                            <td><a href="#"class="edit">enable</a></td>
+                            <td><a href="removeuser.php?use='.$user[$x].'"class="remove">disable</a></td>
                         </tr>';
                     }
 
