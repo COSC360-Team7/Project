@@ -37,7 +37,7 @@ else
         if($admin==false){
             echo '<script type="text/javascript">
                 alert("You are not an admin");
-                window.location.href="../main.html";
+                window.location.href="../main.php";
                 </script>';
         }
         if($admin==true){
