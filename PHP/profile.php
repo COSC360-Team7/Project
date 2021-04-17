@@ -105,7 +105,7 @@ else
         </div>
         <nav>
             <ul class="flexbox justify-content-center justify-content-evenly">
-                <li class="nav-title"><a href="../main.html">Home</a></li>
+                <li class="nav-title"><a href="../main.php">Home</a></li>
                 <li class="nav-title"><a href="html/nav2.html">Popular</a></li>
                 <li class="nav-title"><a href="html/nav3.html">Following</a></li>
                 <!--<li class="nav-title"><a href="PHP/profile.php">Profile</a></li>-->
