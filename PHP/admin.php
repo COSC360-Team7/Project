@@ -48,7 +48,7 @@ else
     else {
         echo '<script type="text/javascript">
                 alert("Not logged in");
-                window.location.href="../main.html";
+                window.location.href="../main.php";
                 </script>';
         //header("Location: ../main.html");
     }
