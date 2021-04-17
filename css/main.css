@@ -135,18 +135,23 @@ nav{
     padding: 0;
     /* height: 40px; */
 }
-nav ul li{
+nav ul {
     height: 60px;
-    padding:auto;
+    padding: 1em auto;
     margin:auto;
-    align-items: center;
+    vertical-align: middle;
 
 }
-nav ul{
+nav ul li{
     display: flex;
     align-items: center;
-
+    padding-bottom: 15px;
 }
+/* 
+nav ul li a:hover{
+    border-bottom: 2px solid black;
+} */
+
 .nav-section h1{
     font-size: 2em;
 }
