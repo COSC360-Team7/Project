@@ -69,7 +69,7 @@ else
 <header>
     <div class="container">
             <div class="page-name">
-                <a class="title" href="../Main.html">Cool<span> Blog</span></a>
+                <a class="title" href="../Main.php">Cool<span> Blog</span></a>
             </div>
         </div>
         
@@ -112,10 +112,10 @@ else
                     ?>
                     </tbody>
                 </table>
-            </div>
-            <div class="admin-button">
+                <div class="admin-button">
                 <a href="users.php" class="admin-btn">Manage Users</a>
                 <a href="search.html" class="admin-btn">Search Users</a>
+            </div>
             </div>
         </div>
     </div>    
