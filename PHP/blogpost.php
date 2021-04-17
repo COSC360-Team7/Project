@@ -126,6 +126,13 @@ else
             </div>
         </div>
     </div>
+    <div class="blog-text">
+        <form method="post" action="#">
+            <Label><b>Make a commment:</b></Label><br>
+            <textarea rows="9" cols="100%"></textarea><br>
+            <input class="button" type="submit" value="Post">
+        </form>
+    </div>
 </section>
 
 <footer class="bgDark colorWhite">
