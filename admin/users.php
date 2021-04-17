@@ -1,3 +1,56 @@
+<?php
+
+
+$host = "localhost";
+$database = "cosc360_project";
+$user = "webuser";
+$password = "P@ssw0rd";
+
+$connection = mysqli_connect($host, $user, $password, $database);
+
+$error = mysqli_connect_error();
+
+$uname = $_COOKIE["user"];
+$category = null;
+$title = null;
+$content = null;
+$img= null;
+//$_SESSION["title"];
+
+$user= array();
+$numrows= null;
+
+
+if($error != null){
+    $output = "<p>Unable to connect to database!</p>";
+    exit($output);
+}
+else
+{
+
+    //good connection, so do you thing
+    $sql = "SELECT * FROM users;";
+    $results = mysqli_query($connection, $sql);
+    $numrows= mysqli_num_rows($results);
+
+    if(mysqli_num_rows($results)!=0){
+        //echo "username has a valid account";
+        $count =1;
+        while ($row = mysqli_fetch_assoc($results)) {
+            $user[$count]= $row['username'] ;
+            $count ++;
+        }
+
+    }
+    else {
+    }
+
+    mysqli_free_result($results);
+    mysqli_close($connection);
+
+
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,8 +81,8 @@
        
         <div class="sidebar">
             <ul>
-                <li><a href="post.html">Manage Posts</a></li>
-                <li><a href="users.html">Manage Users</a></li>
+                <li><a href="post.php">Manage Posts</a></li>
+                <li><a href="users.php">Manage Users</a></li>
             </ul>
             
 
@@ -45,32 +98,23 @@
                         <th colspan="2">Manage</th>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>James</td>
-                            <td>James123</td>
-                            <td><a href="#"class="edit">enable</a></td>
-                            <td><a href="#"class="remove">disable</a></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Casey</td>
-                            <td>Casey456</td>
-                            <td><a href="#"class="edit">enable</a></td>
-                            <td><a href="#"class="remove">disable</a></td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Andrew</td>
-                            <td>Andrew789</td>
-                            <td><a href="#"class="edit">enable</a></td>
-                            <td><a href="#"class="remove">disable</a></td>
-                        </tr>
+                    <?php
+                    for ($x = 1; $x <= $numrows; $x++) {
+                        echo ' <tr>
+                            <td>'.$x.'</td>
+                            <td>'.$user[$x].'</td>
+                            <td> ? </td>
+                            <td><a href="#"class="edit">edit</a></td>
+                            <td><a href="removeuser.php?use='.$user[$x].'"class="remove">remove</a></td>
+                        </tr>';
+                    }
+
+                    ?>
                     </tbody>
                 </table>
             </div>
             <div class="admin-button">
-                <a href="users.html" class="admin-btn">Manage Users</a>
+                <a href="users.php" class="admin-btn">Manage Users</a>
                 <a href="search.html" class="admin-btn">Search Users</a>
             </div>
         </div>

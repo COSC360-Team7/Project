@@ -41,7 +41,7 @@ else
                 </script>';
         }
         if($admin==true){
-
+            header("Location: ../admin/post.php");
         }
 
     }
@@ -57,10 +57,7 @@ else
     mysqli_close($connection);
 }
 ?>
-//search for user by name, email, (post?)
-//enable or disable users
 
-//Search for post and delete them
 
 </body>
 </html>
