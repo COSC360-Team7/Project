@@ -164,8 +164,6 @@ else
 <nav>
     <ul class="flexbox justify-content-center justify-content-evenly">
         <li class="nav-title"><a href="Main.html">Home</a></li>
-        <li class="nav-title"><a href="html/popular.html">Popular</a></li>
-        <li class="nav-title"><a href="html/following.html">Following</a></li>
         <li class="nav-title"><a href="PHP/profile.php">Profile</a></li>
         <li class="nav-title"><a href="html/sign-up.html">Sign up</a></li>
         <li class="nav-title" id="login-btn" style="cursor: pointer;">Login</li>
@@ -181,13 +179,12 @@ else
                     <img class="img" style="height:460px;" alt="img-alt" src="<?php echo str_replace('../','',$blog1["picture"]) ?>">
                     <div class="content">
                         <h1><?php echo $blog1["title"] ?></h1>
-                        <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo omnis distinctio magnam! Molestiae suscipit minus delectus inventore expedita. Non molestiae veniam voluptatem vitae aperiam. Numquam dolorum fugit sint iste...</p>                        
                         <div class="info flexbox justify-content-between">
                             <p class="readMore bgPrimary"><?php
                                     echo '<a href="PHP/blogpost.php?temp='.$blog1["title"].'">'?>Read More</a></p>
                             <div class="tagADate flexbox align-items-center">
                                 <p class="tag"><?php echo $blog1["category"] ?></p>
-                                <p class="date">date</p>
+                                <p class="date">April 10, 2021</p>
                             </div>
                         </div>
                     </div>
@@ -198,13 +195,12 @@ else
                     <img class="img" alt="img-alt" src="<?php echo str_replace('../','',$blog2["picture"]) ?>">
                     <div class="content">
                         <h1><?php echo $blog2["title"] ?></h1>
-                        <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo omnis distinctio magnam! Molestiae suscipit minus delectus inventore expedita. Non molestiae veniam voluptatem vitae aperiam. Numquam dolorum fugit sint iste...</p>
                         <div class="info flexbox justify-content-between">
                             <p class="readMore bgPrimary"><?php
                                 echo '<a href="PHP/blogpost.php?temp='.$blog2["title"].'">'?>Read More</a></p>
                             <div class="tagADate flexbox align-items-center">
                                 <p class="tag"><?php echo $blog2["category"] ?></p>
-                                <p class="date">date</p>
+                                <p class="date">April 4, 2021</p>
                             </div>
                         </div>
                     </div>
@@ -215,13 +211,12 @@ else
                     <img class="img" alt="img-alt" src="<?php echo str_replace('../','',$blog3["picture"]) ?>">
                     <div class="content">
                         <h1><?php echo $blog3["title"] ?></h1>
-                        <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo omnis distinctio magnam! Molestiae suscipit minus delectus inventore expedita. Non molestiae veniam voluptatem vitae aperiam. Numquam dolorum fugit sint iste...</p>
                         <div class="info flexbox justify-content-between">
                             <p class="readMore bgPrimary"><?php
                                 echo '<a href="PHP/blogpost.php?temp='.$blog3["title"].'">'?>Read More</a></p>
                             <div class="tagADate flexbox align-items-center">
                                 <p class="tag"><?php echo $blog3["category"] ?></p>
-                                <p class="date">date</p>
+                                <p class="date">March 20, 2021</p>
                             </div>
                         </div>
                     </div>
@@ -232,13 +227,12 @@ else
                     <img class="img" alt="img-alt" src="<?php echo str_replace('../','',$blog4["picture"]) ?>">
                     <div class="content">
                         <h1><?php echo $blog4["title"] ?></h1>
-                        <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo omnis distinctio magnam! Molestiae suscipit minus delectus inventore expedita. Non molestiae veniam voluptatem vitae aperiam. Numquam dolorum fugit sint iste...</p>
                         <div class="info flexbox justify-content-between">
                             <p class="readMore bgPrimary"><?php
                                 echo '<a href="PHP/blogpost.php?temp='.$blog4["title"].'">'?>Read More</a></p>
                             <div class="tagADate flexbox align-items-center">
                                 <p class="tag"><?php echo $blog4["category"] ?></p>
-                                <p class="date">date</p>
+                                <p class="date">March 17, 2021</p>
                             </div>
                         </div>
                     </div>
@@ -249,13 +243,12 @@ else
                     <img class="img" alt="img-alt" src="<?php echo str_replace('../','',$blog5["picture"]) ?>">
                     <div class="content">
                         <h1><?php echo $blog5["title"] ?></h1>
-                        <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo omnis distinctio magnam! Molestiae suscipit minus delectus inventore expedita. Non molestiae veniam voluptatem vitae aperiam. Numquam dolorum fugit sint iste...</p>
                         <div class="info flexbox justify-content-between">
                             <p class="readMore bgPrimary"><?php
                                 echo '<a href="PHP/blogpost.php?temp='.$blog5["title"].'">'?>Read More</a></p>
                             <div class="tagADate flexbox align-items-center">
                                 <p class="tag"><?php echo $blog5["category"] ?></p>
-                                <p class="date">date</p>
+                                <p class="date">March 1, 2021</p>
                             </div>
                         </div>
                     </div>
@@ -266,13 +259,12 @@ else
                     <img class="img" alt="img-alt" src="<?php echo str_replace('../','',$blog6["picture"]) ?>">
                     <div class="content">
                         <h1><?php echo $blog6["title"] ?></h1>
-                        <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo omnis distinctio magnam! Molestiae suscipit minus delectus inventore expedita. Non molestiae veniam voluptatem vitae aperiam. Numquam dolorum fugit sint iste...</p>
                         <div class="info flexbox justify-content-between">
                             <p class="readMore bgPrimary"><?php
                                 echo '<a href="PHP/blogpost.php?temp='.$blog6["title"].'">'?>Read More</a></p>
                             <div class="tagADate flexbox align-items-center">
                                 <p class="tag"><?php echo $blog6["category"] ?></p>
-                                <p class="date">date</p>
+                                <p class="date">Nov 9, 2020</p>
                             </div>
                         </div>
                     </div>
@@ -289,13 +281,12 @@ else
                     <img class="img" alt="img-alt" src="<?php echo str_replace('../','',$blog7["picture"]) ?>">
                     <div class="content">
                         <h1><?php echo $blog7["title"] ?></h1>
-                        <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo omnis distinctio magnam! Molestiae suscipit minus delectus inventore expedita. Non molestiae veniam voluptatem vitae aperiam. Numquam dolorum fugit sint iste...</p>
                         <div class="info flexbox justify-content-between">
                             <p class="readMore bgPrimary"><?php
                                 echo '<a href="PHP/blogpost.php?temp='.$blog7["title"].'">'?>Read More</a></p>
                             <div class="tagADate flexbox align-items-center">
                                 <p class="tag"><?php echo $blog7["category"] ?></p>
-                                <p class="date">date</p>
+                                <p class="date">Nov 1, 2020</p>
                             </div>
                         </div>
                     </div>
@@ -306,13 +297,12 @@ else
                     <img class="img" alt="img-alt" src="<?php echo str_replace('../','',$blog8["picture"]) ?>">
                     <div class="content">
                         <h1><?php echo $blog8["title"] ?></h1>
-                        <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo omnis distinctio magnam! Molestiae suscipit minus delectus inventore expedita. Non molestiae veniam voluptatem vitae aperiam. Numquam dolorum fugit sint iste...</p>
                         <div class="info flexbox justify-content-between">
                             <p class="readMore bgPrimary"><?php
                                 echo '<a href="PHP/blogpost.php?temp='.$blog8["title"].'">'?>Read More</a></p>
                             <div class="tagADate flexbox align-items-center">
                                 <p class="tag"><?php echo $blog8["category"] ?></p>
-                                <p class="date">date</p>
+                                <p class="date">March 4,2020</p>
                             </div>
                         </div>
                     </div>
@@ -323,13 +313,12 @@ else
                     <img class="img" alt="img-alt" src="<?php echo str_replace('../','',$blog9["picture"]) ?>">
                     <div class="content">
                         <h1><?php echo $blog9["title"] ?></h1>
-                        <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo omnis distinctio magnam! Molestiae suscipit minus delectus inventore expedita. Non molestiae veniam voluptatem vitae aperiam. Numquam dolorum fugit sint iste...</p>
                         <div class="info flexbox justify-content-between">
                             <p class="readMore bgPrimary"><?php
                                 echo '<a href="PHP/blogpost.php?temp='.$blog9["title"].'">'?>Read More</a></p>
                             <div class="tagADate flexbox align-items-center">
                                 <p class="tag"><?php echo $blog9["category"] ?></p>
-                                <p class="date">date</p>
+                                <p class="date">Jan 28, 2020</p>
                             </div>
                         </div>
                     </div>
@@ -375,7 +364,6 @@ else
             </div>
             <div class="tos text-align-center">
                 <h3>Terms of Service</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci dolor nemo possimus blanditiis, delectus eius rerum fuga ipsa, odit voluptates atque asperiores ratione vero debitis, sit voluptatem neque distinctio labore.</p>
             </div>
         </div>
         <div class="copyright text-align-center">
