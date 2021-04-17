@@ -208,6 +208,17 @@ main .img{
 main{
     margin-top: 70px; /*gives room for the nav bar*/
 }
+
+
+
+
+.content{
+    height: 100%;
+}
+
+.blog-post-container{
+    height: 100%;
+}
 .blog-post{
     margin: 1em 0em;
     box-shadow: -2px 2px 10px grey;
@@ -215,6 +226,7 @@ main{
     background-size: 400% 400%;
     animation: gradient 8s ease infinite;
     display:none;
+    /* height:85% ; */
 }
 /*not working*/ 
 /* .container div div:nth-child(even){
@@ -278,6 +290,27 @@ main .tag{
 
 .blog-detail{
     margin:1em;
+    padding:3em;
+}
+
+.blog-text{
+    line-height: 1.8;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.comment{
+    /* border-left:1px solid lightgrey; */
+}
+
+.padding-comment{
+    padding-left:1em;
+}
+
+.comments-container{
+    border:1px solid lightgrey;
+    height: fit-content;
+    width: 100%;
+    padding:1em;
 }
 
 .img-detail{

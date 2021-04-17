@@ -111,14 +111,21 @@ else
 </section>
 
 <section class="blog-detail">
-        <div class="img-container text-align-center">
-        <img class="img-detail" alt="img-alt" src="<?php echo $img ?>">
+    <div class="img-container text-align-center">
+    <img class="img-detail" alt="img-alt" src="<?php echo $img ?>">
     </div>
     <div class="blog-text">
         <h2><?php echo $title ?></h2>
         <p> <?php echo $content ?></p>
-    </article>
-</div>
+    </div>
+    <div class="blog-text">
+        <h2>Comments</h2>
+        <div class="comments-container">
+            <div class="comment"><p><b>Author: </b>Karen Vick <time><i><u>date posted</u></i></time></p>
+                <p class="padding-comment">Wow watch your language</p>
+            </div>
+        </div>
+    </div>
 </section>
 
 <footer class="bgDark colorWhite">
