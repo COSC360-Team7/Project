@@ -209,6 +209,9 @@ main{
     margin-top: 70px; /*gives room for the nav bar*/
 }
 
+
+
+
 .content{
     height: 100%;
 }
@@ -287,6 +290,27 @@ main .tag{
 
 .blog-detail{
     margin:1em;
+    padding:3em;
+}
+
+.blog-text{
+    line-height: 1.8;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.comment{
+    /* border-left:1px solid lightgrey; */
+}
+
+.padding-comment{
+    padding-left:1em;
+}
+
+.comments-container{
+    border:1px solid lightgrey;
+    height: fit-content;
+    width: 100%;
+    padding:1em;
 }
 
 .img-detail{
