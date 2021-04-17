@@ -208,6 +208,14 @@ main .img{
 main{
     margin-top: 70px; /*gives room for the nav bar*/
 }
+
+.content{
+    height: 100%;
+}
+
+.blog-post-container{
+    height: 100%;
+}
 .blog-post{
     margin: 1em 0em;
     box-shadow: -2px 2px 10px grey;
@@ -215,6 +223,7 @@ main{
     background-size: 400% 400%;
     animation: gradient 8s ease infinite;
     display:none;
+    /* height:85% ; */
 }
 /*not working*/ 
 /* .container div div:nth-child(even){
