@@ -117,7 +117,7 @@ else
 <header>
     <div class="container">
             <div class="page-name">
-                <a class="title" href="../Main.html">Cool<span> Blog</span></a>
+                <a class="title" href="../Main.php">Cool<span> Blog</span></a>
             </div>
         </div>
         

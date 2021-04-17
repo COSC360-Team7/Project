@@ -92,7 +92,7 @@ else
                 </ul>
             </div>
             <div class="page-name">
-                <a class="title" href="#">Cool<span> Blog</span></a>
+                <a class="title" href="../Main.php">Cool<span> Blog</span></a>
             </div>
             <div class="sns">
                 <ul class="flexbox justify-content-evenly">
@@ -106,9 +106,7 @@ else
         <nav>
             <ul class="flexbox justify-content-center justify-content-evenly">
                 <li class="nav-title"><a href="../main.php">Home</a></li>
-                <li class="nav-title"><a href="html/nav2.html">Popular</a></li>
-                <li class="nav-title"><a href="html/nav3.html">Following</a></li>
-                <!--<li class="nav-title"><a href="PHP/profile.php">Profile</a></li>-->
+                <li class="nav-title"><a href="profile.php">Profile</a></li>
                 <li class="nav-title" id="login-btn" style="cursor: pointer;">Login</li>
                 <li class="nav-title"><a href="logout.php">Logout</a></li>
             </ul>
@@ -222,45 +220,38 @@ else
     </div>
   </section>
 </body>
-<footer class="bgDark colorWhite">
-  <div class="container">
-      <div class="g-3-col">
-          <div class="about-us text-align-center">
-              <h3>About Us</h3>
-              <div class="title-container">
-                  <a class="title" href="#">Cool<span> Blog</span></a> 
-              </div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate eaque porro magni in molestias quod necessitatibus amet dolorum aliquam, voluptatibus odio rerum laudantium sit eos eveniet labore omnis exercitationem consectetur?</p>
-              <div class="sns">
-                  <ul class="flexbox justify-content-evenly">
-                      <li><a><i class="fab fa-twitter-square"></i></a></li>
-                      <li><a><i class="fab fa-facebook-square"></i></a></li>
-                      <li><a><i class="fab fa-flickr"></i></a></li>
-                      <li><a><i class="fab fa-youtube-square"></i></a></li>
-                  </ul>
-              </div>
-          </div>
-          <div class="tags text-align-center">
-              <h3>Tags</h3>
-              <ul class="flexbox">
-                  <li class="tag"><a>Tag1</a></li>
-                  <li class="tag"><a>Tag2</a></li>
-                  <li class="tag"><a>Tag3</a></li>
-                  <li class="tag"><a>Tag4</a></li>
-                  <li class="tag"><a>Tag5</a></li>
-                  <li class="tag"><a>Tag6</a></li>
-                  <li class="tag"><a>Tag7</a></li>
-              </ul>
-          </div>
-          <div class="tos text-align-center">
-              <h3>Terms of Service</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci dolor nemo possimus blanditiis, delectus eius rerum fuga ipsa, odit voluptates atque asperiores ratione vero debitis, sit voluptatem neque distinctio labore.</p>
-          </div>
-      </div>
-      <div class="copyright text-align-center">
-          <p>Made by ... &copy;All rights reserved</p>
-      </div>
-  </div>
+<footer class="bgDark colorWhite" style="margin:0">
+    <div class="containeasdsadar" style="margin:0;">
+        <div class="g-3-col">
+            <div class="about-us text-align-center">
+                <h3>About Us</h3>
+                <p>We are students from UBCO taking COSC 360:Web Development course and this is our first web development project. Most of us are thrid year students and we work from different parts of the country</p>
+                <p>If you have any questions you can email us via the contact info</p>
+
+                <div class="sns">
+                    <ul class="flexbox justify-content-evenly">
+                        <li><a><i class="fab fa-twitter-square"></i></a></li>
+                        <li><a><i class="fab fa-facebook-square"></i></a></li>
+                        <li><a><i class="fab fa-flickr"></i></a></li>
+                        <li><a><i class="fab fa-youtube-square"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tags text-align-center">
+            <div class="title-container">
+                    <a class="title" href="../Main.php">Cool<span> Blog</span></a> 
+                </div>
+            </div>
+            <div class="tos text-align-center">
+                <h3>Terms of Service</h3>
+                <p>Please read the following terms and conditions carefully.</p>
+                <p>By accessing Cool Blog website,mobile or tablet application, you agree to be bound by our terms and conditions.</p>
+            </div>
+        </div>
+        <div class="copyright text-align-center">
+            <p>Made by COSC360 &copy;All rights reserved</p>
+        </div>
+    </div>
 </footer>
 <script type="text/javascript">
 var savedpostsbtn = $("#Sposts");
