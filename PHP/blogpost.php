@@ -21,6 +21,9 @@ $category = null;
 $title = null;
 $content = null;
 $img= null;
+if(isset($_GET["temp"])){
+    $_SESSION["title"] = $_GET["temp"];
+}
 $passed= $_SESSION["title"];
 
 

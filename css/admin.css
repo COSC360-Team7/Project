@@ -1,0 +1,93 @@
+header{
+    background-color:rgb(150, 187, 221);
+    border-bottom: 1pt solid royalblue;
+}
+
+.admin-wrapper{
+    display:flex;
+    height: 750px;
+}
+
+.admin-wrapper .sidebar{
+    flex:2;
+    background-color:rgb(117, 168, 216);    
+}
+
+.admin-wrapper .sidebar ul{
+   margin:0;
+   padding:0;
+}
+
+.admin-wrapper .sidebar ul li a{
+    padding: 1em;
+    display:block;
+    border-bottom: 1pt solid royalblue;
+ }
+
+ .admin-wrapper .sidebar ul li a:hover{
+     background-color: royalblue;
+ }
+
+ .admin-button{
+    padding-top: 1em;
+    display:flex;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    
+ }
+
+ .admin-btn{
+     margin:0em 1em;
+     background-color: royalblue;
+     border: 1pt solid rgb(117, 168, 216);padding: 1em 3em;
+     transition:0.3s;
+     width:5%;
+ }
+.admin-wrapper .admin-content{
+    flex:8;
+    padding: 1em 2em 1em 2em;
+
+}
+.admin-wrapper .admin-content .admin-title{
+    text-align: center;
+    font-size: 1.5em;
+}
+.admin-wrapper .admin-content table{
+    border-collapse: collapse;
+    width:100%;
+}
+.admin-wrapper .admin-content table th{
+    text-align: left;
+    padding:1em;
+    border-bottom: 1pt solid lightgray;
+}
+.admin-wrapper .admin-content table td{
+    text-align: left;
+    padding:1em;
+    border-bottom: 1pt solid lightgray;
+}
+
+.edit{
+    color:blue;
+}
+
+.remove{
+    color:red;
+}
+
+.edit:hover{
+    text-decoration: underline;
+}
+
+.remove:hover{
+    text-decoration: underline;
+}
+/* extra responsiveness with mobile devices */
+@media (min-width:200px) and (max-width:800px){
+
+    .admin-wrapper{
+        flex-direction: column;
+        grid-template-columns: 1fr;
+    }
+}

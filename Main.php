@@ -38,6 +38,36 @@ $blog3 = [
     "picture" => "foo",
     "category" => "foo",
 ];
+$blog4 = [
+    "title" => "bar",
+    "picture" => "foo",
+    "category" => "foo",
+];
+$blog5 = [
+    "title" => "bar",
+    "picture" => "foo",
+    "category" => "foo",
+];
+$blog6 = [
+    "title" => "bar",
+    "picture" => "foo",
+    "category" => "foo",
+];
+$blog7 = [
+    "title" => "bar",
+    "picture" => "foo",
+    "category" => "foo",
+];
+$blog8 = [
+    "title" => "bar",
+    "picture" => "foo",
+    "category" => "foo",
+];
+$blog9 = [
+    "title" => "bar",
+    "picture" => "foo",
+    "category" => "foo",
+];
 
 
 
@@ -70,6 +100,8 @@ else
 
     mysqli_free_result($results);
     mysqli_close($connection);
+
+
 }
 ?>
 <!DOCTYPE html>
@@ -151,8 +183,8 @@ else
                         <h1><?php echo $blog1["title"] ?></h1>
                         <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo omnis distinctio magnam! Molestiae suscipit minus delectus inventore expedita. Non molestiae veniam voluptatem vitae aperiam. Numquam dolorum fugit sint iste...</p>                        
                         <div class="info flexbox justify-content-between">
-                            <p class="readMore bgPrimary"><?php $_SESSION["title"]= $blog1['title'];
-                                    echo '<a href="PHP/blogpost.php">'?>Read More</a></p>
+                            <p class="readMore bgPrimary"><?php
+                                    echo '<a href="PHP/blogpost.php?temp='.$blog1["title"].'">'?>Read More</a></p>
                             <div class="tagADate flexbox align-items-center">
                                 <p class="tag"><?php echo $blog1["category"] ?></p>
                                 <p class="date">date</p>
@@ -168,8 +200,8 @@ else
                         <h1><?php echo $blog2["title"] ?></h1>
                         <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo omnis distinctio magnam! Molestiae suscipit minus delectus inventore expedita. Non molestiae veniam voluptatem vitae aperiam. Numquam dolorum fugit sint iste...</p>
                         <div class="info flexbox justify-content-between">
-                            <p class="readMore bgPrimary"><?php $_SESSION["title"]= $blog2['title'];
-                                echo '<a href="PHP/blogpost.php">'?>Read More</a></p>
+                            <p class="readMore bgPrimary"><?php
+                                echo '<a href="PHP/blogpost.php?temp='.$blog2["title"].'">'?>Read More</a></p>
                             <div class="tagADate flexbox align-items-center">
                                 <p class="tag"><?php echo $blog2["category"] ?></p>
                                 <p class="date">date</p>
@@ -185,8 +217,8 @@ else
                         <h1><?php echo $blog3["title"] ?></h1>
                         <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo omnis distinctio magnam! Molestiae suscipit minus delectus inventore expedita. Non molestiae veniam voluptatem vitae aperiam. Numquam dolorum fugit sint iste...</p>
                         <div class="info flexbox justify-content-between">
-                            <p class="readMore bgPrimary"><?php $_SESSION["title"]= $blog3['title'];
-                                echo '<a href="PHP/blogpost.php">'?>Read More</a></p>
+                            <p class="readMore bgPrimary"><?php
+                                echo '<a href="PHP/blogpost.php?temp='.$blog3["title"].'">'?>Read More</a></p>
                             <div class="tagADate flexbox align-items-center">
                                 <p class="tag"><?php echo $blog3["category"] ?></p>
                                 <p class="date">date</p>
@@ -197,48 +229,51 @@ else
             </div>
             <div>
                 <article class="blog-post">
-                    <img class="img" alt="img-alt" src="images/rocket-in-clouds.jpg">
+                    <img class="img" alt="img-alt" src="<?php echo str_replace('../','',$blog4["picture"]) ?>">
                     <div class="content">
-                        <h1>Blog post heading</h1>
-                        <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo omnis distinctio magnam! Molestiae suscipit minus delectus inventore expedita. Non molestiae veniam voluptatem vitae aperiam. Numquam dolorum fugit sint iste...</p>                        
-                            <div class="info flexbox justify-content-between">
-                                <p class="readMore bgPrimary"><a href="PHP/blogpost.php">>Read More</a></p>
-                                <div class="tagADate flexbox align-items-center">
-                                    <p class="tag">Tag</p>
-                                    <p class="date">date</p>
-                                </div>
+                        <h1><?php echo $blog4["title"] ?></h1>
+                        <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo omnis distinctio magnam! Molestiae suscipit minus delectus inventore expedita. Non molestiae veniam voluptatem vitae aperiam. Numquam dolorum fugit sint iste...</p>
+                        <div class="info flexbox justify-content-between">
+                            <p class="readMore bgPrimary"><?php
+                                echo '<a href="PHP/blogpost.php?temp='.$blog4["title"].'">'?>Read More</a></p>
+                            <div class="tagADate flexbox align-items-center">
+                                <p class="tag"><?php echo $blog4["category"] ?></p>
+                                <p class="date">date</p>
+                            </div>
                         </div>
                     </div>
                 </article>
             </div>
             <div>
                 <article class="blog-post">
-                    <img class="img" alt="img-alt" src="images/rocket-in-clouds.jpg">
+                    <img class="img" alt="img-alt" src="<?php echo str_replace('../','',$blog5["picture"]) ?>">
                     <div class="content">
-                        <h1>Blog post heading</h1>
-                        <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo omnis distinctio magnam! Molestiae suscipit minus delectus inventore expedita. Non molestiae veniam voluptatem vitae aperiam. Numquam dolorum fugit sint iste...</p>                       
-                            <div class="info flexbox justify-content-between">
-                                <p class="readMore bgPrimary"><a href="PHP/blogpost.php">>Read More</a></p>
-                                <div class="tagADate flexbox align-items-center">
-                                    <p class="tag">Tag</p>
-                                    <p class="date">date</p>
-                                </div>
+                        <h1><?php echo $blog5["title"] ?></h1>
+                        <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo omnis distinctio magnam! Molestiae suscipit minus delectus inventore expedita. Non molestiae veniam voluptatem vitae aperiam. Numquam dolorum fugit sint iste...</p>
+                        <div class="info flexbox justify-content-between">
+                            <p class="readMore bgPrimary"><?php
+                                echo '<a href="PHP/blogpost.php?temp='.$blog5["title"].'">'?>Read More</a></p>
+                            <div class="tagADate flexbox align-items-center">
+                                <p class="tag"><?php echo $blog5["category"] ?></p>
+                                <p class="date">date</p>
+                            </div>
                         </div>
                     </div>
                 </article>
             </div>
             <div>
                 <article class="blog-post">
-                    <img class="img" alt="img-alt" src="images/rocket-in-clouds.jpg">
+                    <img class="img" alt="img-alt" src="<?php echo str_replace('../','',$blog6["picture"]) ?>">
                     <div class="content">
-                        <h1>Blog post heading</h1>
-                        <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo omnis distinctio magnam! Molestiae suscipit minus delectus inventore expedita. Non molestiae veniam voluptatem vitae aperiam. Numquam dolorum fugit sint iste...</p>                       
-                            <div class="info flexbox justify-content-between">
-                                <p class="readMore bgPrimary"><a href="PHP/blogpost.php">Read More</a></p>
-                                <div class="tagADate flexbox align-items-center">
-                                    <p class="tag">Tag</p>
-                                    <p class="date">date</p>
-                                </div>
+                        <h1><?php echo $blog6["title"] ?></h1>
+                        <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo omnis distinctio magnam! Molestiae suscipit minus delectus inventore expedita. Non molestiae veniam voluptatem vitae aperiam. Numquam dolorum fugit sint iste...</p>
+                        <div class="info flexbox justify-content-between">
+                            <p class="readMore bgPrimary"><?php
+                                echo '<a href="PHP/blogpost.php?temp='.$blog6["title"].'">'?>Read More</a></p>
+                            <div class="tagADate flexbox align-items-center">
+                                <p class="tag"><?php echo $blog6["category"] ?></p>
+                                <p class="date">date</p>
+                            </div>
                         </div>
                     </div>
                 </article>
@@ -251,48 +286,51 @@ else
         <div class="g-3-col">
             <div>
                 <article class="blog-post">
-                    <img class="img" alt="img-alt" src="images/rocket-in-clouds.jpg">
+                    <img class="img" alt="img-alt" src="<?php echo str_replace('../','',$blog7["picture"]) ?>">
                     <div class="content">
-                        <h1>Blog post heading</h1>
-                        <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo omnis distinctio magnam! Molestiae suscipit minus delectus inventore expedita. Non molestiae veniam voluptatem vitae aperiam. Numquam dolorum fugit sint iste...</p>                        
-                            <div class="info flexbox justify-content-between">
-                                <p class="readMore bgPrimary"><a href="html/blogpost.html">Read More</a></p>
-                                <div class="tagADate flexbox align-items-center">
-                                    <p class="tag">Tag</p>
-                                    <p class="date">date</p>
-                                </div>
+                        <h1><?php echo $blog7["title"] ?></h1>
+                        <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo omnis distinctio magnam! Molestiae suscipit minus delectus inventore expedita. Non molestiae veniam voluptatem vitae aperiam. Numquam dolorum fugit sint iste...</p>
+                        <div class="info flexbox justify-content-between">
+                            <p class="readMore bgPrimary"><?php
+                                echo '<a href="PHP/blogpost.php?temp='.$blog7["title"].'">'?>Read More</a></p>
+                            <div class="tagADate flexbox align-items-center">
+                                <p class="tag"><?php echo $blog7["category"] ?></p>
+                                <p class="date">date</p>
+                            </div>
                         </div>
                     </div>
                 </article>
             </div>
             <div>
                 <article class="blog-post">
-                    <img class="img" alt="img-alt" src="images/rocket-in-clouds.jpg">
+                    <img class="img" alt="img-alt" src="<?php echo str_replace('../','',$blog8["picture"]) ?>">
                     <div class="content">
-                        <h1>Blog post heading</h1>
-                        <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo omnis distinctio magnam! Molestiae suscipit minus delectus inventore expedita. Non molestiae veniam voluptatem vitae aperiam. Numquam dolorum fugit sint iste...</p>                       
-                            <div class="info flexbox justify-content-between">
-                                <p class="readMore bgPrimary"><a href="html/blogpost.html">Read More</a></p>
-                                <div class="tagADate flexbox align-items-center">
-                                    <p class="tag">Tag</p>
-                                    <p class="date">date</p>
-                                </div>
+                        <h1><?php echo $blog8["title"] ?></h1>
+                        <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo omnis distinctio magnam! Molestiae suscipit minus delectus inventore expedita. Non molestiae veniam voluptatem vitae aperiam. Numquam dolorum fugit sint iste...</p>
+                        <div class="info flexbox justify-content-between">
+                            <p class="readMore bgPrimary"><?php
+                                echo '<a href="PHP/blogpost.php?temp='.$blog8["title"].'">'?>Read More</a></p>
+                            <div class="tagADate flexbox align-items-center">
+                                <p class="tag"><?php echo $blog8["category"] ?></p>
+                                <p class="date">date</p>
+                            </div>
                         </div>
                     </div>
                 </article>
             </div>
             <div>
                 <article class="blog-post">
-                    <img class="img" alt="img-alt" src="images/rocket-in-clouds.jpg">
+                    <img class="img" alt="img-alt" src="<?php echo str_replace('../','',$blog9["picture"]) ?>">
                     <div class="content">
-                        <h1>Blog post heading</h1>
-                        <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo omnis distinctio magnam! Molestiae suscipit minus delectus inventore expedita. Non molestiae veniam voluptatem vitae aperiam. Numquam dolorum fugit sint iste...</p>                       
-                            <div class="info flexbox justify-content-between">
-                                <p class="readMore bgPrimary"><a href="html/blogpost.html">Read More</a></p>
-                                <div class="tagADate flexbox align-items-center">
-                                    <p class="tag">Tag</p>
-                                    <p class="date">date</p>
-                                </div>
+                        <h1><?php echo $blog9["title"] ?></h1>
+                        <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo omnis distinctio magnam! Molestiae suscipit minus delectus inventore expedita. Non molestiae veniam voluptatem vitae aperiam. Numquam dolorum fugit sint iste...</p>
+                        <div class="info flexbox justify-content-between">
+                            <p class="readMore bgPrimary"><?php
+                                echo '<a href="PHP/blogpost.php?temp='.$blog9["title"].'">'?>Read More</a></p>
+                            <div class="tagADate flexbox align-items-center">
+                                <p class="tag"><?php echo $blog9["category"] ?></p>
+                                <p class="date">date</p>
+                            </div>
                         </div>
                     </div>
                 </article>
