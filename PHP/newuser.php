@@ -117,6 +117,7 @@ else
         }*/
 
         if(mysqli_query($connection, $nsql)){
+            header("Location: profile.php");
             echo "An account has been created";
         }
         else{

@@ -53,8 +53,8 @@ CREATE TABLE `blogs` (
 
 INSERT INTO `users` (`username`, `firstName`, `lastName`, `email`, `password`,`admin`,`pfp` ) VALUES
 ('markhayes', 'mark', 'hayes', 'mark.hayes@email.com', 'ea82410c7a9991816b5eeeebe195e20a', true, '../pfp/grinch.jpg');
-INSERT INTO `users` (`username`, `firstName`, `lastName`, `email`, `password`,`admin`) VALUES
-('paulz', 'paul', 'z', 'paul.z@email.com', '6c63212ab48e8401eaf6b59b95d816a9', true);
+INSERT INTO `users` (`username`, `firstName`, `lastName`, `email`, `password`,`admin`, `pfp`) VALUES
+('paulz', 'paul', 'z', 'paul.z@email.com', '6c63212ab48e8401eaf6b59b95d816a9', true, '../pfp/yes.jpg');
 INSERT INTO `users` (`username`, `firstName`, `lastName`, `email`, `password`,`admin`) VALUES
 ('magicjonsen', 'joseph', 'magic', 'joseph@email.com', 'cb07901c53218323c4ceacdea4b23c98', true);
 INSERT INTO `users` (`username`, `firstName`, `lastName`, `email`, `password`,`admin`) VALUES
@@ -328,7 +328,8 @@ ALTER TABLE `users`
 
 ALTER TABLE `blogs`
     ADD FOREIGN KEY (username)
-    REFERENCES `users` (username);
+    REFERENCES `users` (username)
+    ON DELETE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
